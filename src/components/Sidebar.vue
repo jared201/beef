@@ -10,7 +10,7 @@
     >
       <div class="p-1">
         <img
-          src="../assets/orange_burst.png"
+          src="../assets/logo.png"
           alt="Lightweight UI components for Vue.js based on Bulma"
         />
         <b-menu>
