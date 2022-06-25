@@ -1,8 +1,9 @@
 <template>
   <div id="app">
+    <nav-bar-header/>>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-    <sidebar/>>
+    <sidebar/>
   </div>
 </template>
 
@@ -10,11 +11,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 import Sidebar from './components/Sidebar.vue';
+import NavBarHeader from "./components/NavBarHeader.vue";
 
 @Component({
   components: {
     HelloWorld,
     Sidebar,
+    NavBarHeader
   },
 })
 export default class App extends Vue {
