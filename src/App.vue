@@ -1,23 +1,24 @@
 <template>
-  <div id="app">
-    <nav-bar-header/>>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id="app" class="container">
+    <nav-bar-header/>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+   <Hero/>
     <sidebar/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
 import Sidebar from './components/Sidebar.vue';
 import NavBarHeader from "./components/NavBarHeader.vue";
+import Hero from './components/Hero.vue';
+
 
 @Component({
   components: {
-    HelloWorld,
+    Hero,
     Sidebar,
-    NavBarHeader
+    NavBarHeader,
   },
 })
 export default class App extends Vue {
