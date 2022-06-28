@@ -1,6 +1,6 @@
 <template>
     <div>
-    <b-navbar fixed-top>
+    <b-navbar fixed-bottom>
         <template #brand>
             <!-- <b-navbar-item tag="router-link" :to="{ path: '/' }"> -->
                 <b-navbar-item >
@@ -46,7 +46,7 @@
 <script>
 
 export default {
-    name: 'NavBarHeader',
+    name: 'NavBarFooter',
 }
 </script>
 

@@ -4,6 +4,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
    <Hero/>
     <sidebar/>
+    <nav-bar-footer/>
   </div>
 </template>
 
@@ -12,13 +13,14 @@ import { Component, Vue } from 'vue-property-decorator';
 import Sidebar from './components/Sidebar.vue';
 import NavBarHeader from "./components/NavBarHeader.vue";
 import Hero from './components/Hero.vue';
-
+import NavBarFooter from './components/NavBarFooter.vue';
 
 @Component({
   components: {
     Hero,
     Sidebar,
     NavBarHeader,
+    NavBarFooter,
   },
 })
 export default class App extends Vue {

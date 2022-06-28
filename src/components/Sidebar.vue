@@ -10,15 +10,15 @@
     >
       <div class="p-1">
         <img
-          src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
+          src="../assets/steak-mafia.png"
           alt="Lightweight UI components for Vue.js based on Bulma"
         />
         <b-menu>
           <b-menu-list label="Menu">
-            <b-menu-item icon="information-outline" label="Info"></b-menu-item>
+            <b-menu-item icon="information-outline" label="Cards"></b-menu-item>
             <b-menu-item icon="settings">
               <template #label="props">
-                Administrator
+                Modals
                 <b-icon class="is-pulled-right" :icon="props.expanded ? 'menu-down' : 'menu-up'"></b-icon>
               </template>
               <b-menu-item icon="account" label="Users"></b-menu-item>
@@ -37,14 +37,14 @@
               </b-menu-item>
               <b-menu-item icon="cash-multiple" label="Payments" disabled></b-menu-item>
             </b-menu-item>
-            <b-menu-item icon="account" label="My Account">
+            <b-menu-item icon="account" label="Galler">
               <b-menu-item label="Account data"></b-menu-item>
               <b-menu-item label="Addresses"></b-menu-item>
             </b-menu-item>
           </b-menu-list>
           <b-menu-list>
             <!-- <b-menu-item label="Expo" icon="link" tag="router-link" target="_blank" to="/expo"></b-menu-item> -->
-            <b-menu-item label="Expo" icon="link" ></b-menu-item>
+            <b-menu-item label="Indicators" icon="link" ></b-menu-item>
           </b-menu-list>
           <b-menu-list label="Actions">
             <b-menu-item label="Logout"></b-menu-item>
