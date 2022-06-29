@@ -23,8 +23,16 @@ import NavBarFooter from './components/NavBarFooter.vue';
     NavBarFooter,
   },
 })
+
 export default class App extends Vue {
-  
+  data() {
+    return {
+      //
+    };
+  }
+  mounted() {
+    document.title = 'Beef Template'
+  }
 }
 </script>
 

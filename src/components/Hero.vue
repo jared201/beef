@@ -3,7 +3,7 @@
     <div class="hero-body">
         <div class="container">
         <h1 class="title">
-            SteakMafia Dashboard Template
+            Beef Dashboard Template
         </h1>
         <h2 class="subtitle">
             A Template for all

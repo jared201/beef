@@ -71,8 +71,8 @@
     <b-button @click="open = true">Show</b-button>
   </section>
 </template>
-
 <script>
+
 export default {
   data() {
     return {
@@ -86,7 +86,14 @@ export default {
 };
 </script>
 
+
 <style>
+.switch input[type=checkbox]:checked + .check {
+    background: #d59a57;
+}
+.switch:hover input[type=checkbox]:checked + .check {
+    background: #d59a57;
+}
 .p-1 {
   padding: 1em;
 }
