@@ -1,24 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-    <sidebar/>>
+  <div id="app" class="container">
+    <nav-bar-header/>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+   <Hero/>
+    <sidebar/>
+    <nav-bar-footer/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
 import Sidebar from './components/Sidebar.vue';
+import NavBarHeader from "./components/NavBarHeader.vue";
+import Hero from './components/Hero.vue';
+import NavBarFooter from './components/NavBarFooter.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    Hero,
     Sidebar,
+    NavBarHeader,
+    NavBarFooter,
   },
 })
+
 export default class App extends Vue {
-  
+  data() {
+    return {
+      //
+    };
+  }
+  mounted() {
+    document.title = 'Beef Template'
+  }
 }
 </script>
 
