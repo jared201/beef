@@ -37,9 +37,9 @@
               </b-menu-item>
               <b-menu-item icon="cash-multiple" label="Payments" disabled></b-menu-item>
             </b-menu-item>
-            <b-menu-item icon="account" label="Galler">
-              <b-menu-item label="Account data"></b-menu-item>
-              <b-menu-item label="Addresses"></b-menu-item>
+            <b-menu-item icon="account" label="Gallery">
+              <b-menu-item label="Graphs"></b-menu-item>
+              <b-menu-item label="Stories"></b-menu-item>
             </b-menu-item>
           </b-menu-list>
           <b-menu-list>
