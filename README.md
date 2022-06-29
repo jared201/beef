@@ -1,4 +1,4 @@
-# xdash
+# Beef Template
 
 ## Project setup
 ```
