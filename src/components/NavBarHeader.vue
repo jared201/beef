@@ -2,8 +2,11 @@
     <div>
     <b-navbar fixed-top>
         <template #brand>
+            
             <!-- <b-navbar-item tag="router-link" :to="{ path: '/' }"> -->
+                <b-navbar-item tag="div"><sidebar/></b-navbar-item>
                 <b-navbar-item >
+                    
                 <img
                     src="../assets/steak-mafia.png"
                     alt="Lightweight UI components for Vue.js based on Bulma"
@@ -45,8 +48,13 @@
 </template>
 <script>
 
+import Sidebar from './Sidebar.vue'
+
 export default {
     name: 'NavBarHeader',
+    components : {
+        Sidebar
+    }
 }
 </script>
 
