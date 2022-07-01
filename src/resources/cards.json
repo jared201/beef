@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Card 1", 
+        "description": "description of this Card1",
+        "img": "image_url",
+        "graph_link":"graph_link"
+    },
+    {
+        "title": "Card 2", 
+        "description": "description of this Card2",
+        "img": "image_url",
+        "graph_link":"graph_link"        
+    },
+    {
+        "title": "Card 3", 
+        "description": "description of this Card3",
+        "img": "image_url",
+        "graph_link":"graph_link"        
+    }
+]

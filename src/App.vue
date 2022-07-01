@@ -1,37 +1,29 @@
 <template>
   <div id="app" class="container">
-    <nav-bar-header/>
+   
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-   <Hero/>
+    <nav-bar-header></nav-bar-header>
     <sidebar/>
+    <Hero></Hero>
     <nav-bar-footer/>
+    
+   
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Sidebar from './components/Sidebar.vue';
-import NavBarHeader from "./components/NavBarHeader.vue";
-import Hero from './components/Hero.vue';
-import NavBarFooter from './components/NavBarFooter.vue';
+<script lang="javascript">
+import Hero from './components/Hero.vue'
+import NavBarHeader from './components/NavBarHeader.vue'
+import NavBarFooter from './components/NavBarFooter.vue'
+import Sidebar from './components/Sidebar.vue'
 
-@Component({
+export default {
+  name: 'App',
   components: {
     Hero,
-    Sidebar,
     NavBarHeader,
     NavBarFooter,
-  },
-})
-
-export default class App extends Vue {
-  data() {
-    return {
-      //
-    };
-  }
-  mounted() {
-    document.title = 'Beef Template'
+    Sidebar,
   }
 }
 </script>

@@ -1,58 +1,40 @@
 <template>
-  <section>
-    <b-sidebar
-      type="is-light"
-      :fullheight="fullheight"
-      :fullwidth="fullwidth"
-      :overlay="overlay"
-      :right="right"
-      v-model="open"
-    >
-      <div class="p-1">
-        <img
-          src="../assets/steak-mafia.png"
-          alt="Lightweight UI components for Vue.js based on Bulma"
-        />
-        <b-menu>
-          <b-menu-list label="Menu">
-            <b-menu-item icon="information-outline" label="Cards"></b-menu-item>
-            <b-menu-item icon="settings">
-              <template #label="props">
-                Modals
-                <b-icon class="is-pulled-right" :icon="props.expanded ? 'menu-down' : 'menu-up'"></b-icon>
-              </template>
-              <b-menu-item icon="account" label="Users"></b-menu-item>
-              <b-menu-item icon="cellphone-link">
-                <template #label>
-                  Devices
-                  <b-dropdown aria-role="list" class="is-pulled-right" position="is-bottom-left">
-                        <template #trigger>
-                            <b-icon icon="dots-vertical"></b-icon>
-                        </template>
-                        <b-dropdown-item aria-role="listitem">Action</b-dropdown-item>
-                        <b-dropdown-item aria-role="listitem">Another action</b-dropdown-item>
-                        <b-dropdown-item aria-role="listitem">Something else</b-dropdown-item>
-                  </b-dropdown>
-                </template>
-              </b-menu-item>
-              <b-menu-item icon="cash-multiple" label="Payments" disabled></b-menu-item>
-            </b-menu-item>
-            <b-menu-item icon="account" label="Galler">
-              <b-menu-item label="Account data"></b-menu-item>
-              <b-menu-item label="Addresses"></b-menu-item>
-            </b-menu-item>
-          </b-menu-list>
-          <b-menu-list>
-            <!-- <b-menu-item label="Expo" icon="link" tag="router-link" target="_blank" to="/expo"></b-menu-item> -->
-            <b-menu-item label="Indicators" icon="link" ></b-menu-item>
-          </b-menu-list>
-          <b-menu-list label="Actions">
-            <b-menu-item label="Logout"></b-menu-item>
-          </b-menu-list>
-        </b-menu>
-      </div>
-    </b-sidebar>
-    <div class="block">
+  <section class="sidebar" id="sidebar">
+    <aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a>Dashboard</a></li>
+    <li><a>Customers</a></li>
+  </ul>
+  <p class="menu-label">
+    Administration
+  </p>
+  <ul class="menu-list">
+    <li><a>Team Settings</a></li>
+    <li>
+      <a class="is-active">Manage Your Team</a>
+      <ul>
+        <li><a>Members</a></li>
+        <li><a>Plugins</a></li>
+        <li><a>Add a member</a></li>
+      </ul>
+    </li>
+    <li><a>Invitations</a></li>
+    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Authentication</a></li>
+  </ul>
+  <p class="menu-label">
+    Transactions
+  </p>
+  <ul class="menu-list">
+    <li><a>Payments</a></li>
+    <li><a>Transfers</a></li>
+    <li><a>Balance</a></li>
+  </ul>
+</aside>
+    <!-- <div class="block">
       <b-field grouped group-multiline>
         <div class="control">
           <b-switch v-model="overlay">Overlay</b-switch>
@@ -67,8 +49,8 @@
           <b-switch v-model="right">Right</b-switch>
         </div>
       </b-field>
-    </div>
-    <b-button @click="open = true">Show</b-button>
+    </div> -->
+    
   </section>
 </template>
 <script>
@@ -88,13 +70,60 @@ export default {
 
 
 <style>
-.switch input[type=checkbox]:checked + .check {
-    background: #d59a57;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
-.switch:hover input[type=checkbox]:checked + .check {
-    background: #d59a57;
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-.p-1 {
-  padding: 1em;
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 </style>

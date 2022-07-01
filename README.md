@@ -1,4 +1,4 @@
-# xdash
+# Beef Template
 
 ## Project setup
 ```
@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+  ![](https://www.paypal.com/en_PH/i/scr/pixel.gif)
