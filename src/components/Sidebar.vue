@@ -15,7 +15,7 @@
         />
         <b-menu>
           <b-menu-list label="Menu">
-            <b-menu-item icon="information-outline" label="Cards"></b-menu-item>
+            <b-menu-item icon="information-outline" label="Cards"><router-link to="/cards"></router-link></b-menu-item>
             <b-menu-item icon="settings">
               <template #label="props">
                 Modals
@@ -37,9 +37,9 @@
               </b-menu-item>
               <b-menu-item icon="cash-multiple" label="Payments" disabled></b-menu-item>
             </b-menu-item>
-            <b-menu-item icon="account" label="Galler">
-              <b-menu-item label="Account data"></b-menu-item>
-              <b-menu-item label="Addresses"></b-menu-item>
+            <b-menu-item icon="account" label="Gallery">
+              <b-menu-item label="Graphs"></b-menu-item>
+              <b-menu-item label="Stories"></b-menu-item>
             </b-menu-item>
           </b-menu-list>
           <b-menu-list>
@@ -52,7 +52,7 @@
         </b-menu>
       </div>
     </b-sidebar>
-    <div class="block">
+    <!-- <div class="block">
       <b-field grouped group-multiline>
         <div class="control">
           <b-switch v-model="overlay">Overlay</b-switch>
@@ -67,8 +67,8 @@
           <b-switch v-model="right">Right</b-switch>
         </div>
       </b-field>
-    </div>
-    <b-button @click="open = true">Show</b-button>
+    </div> -->
+    <b-button @click="open = true"><strong>Burger</strong></b-button>
   </section>
 </template>
 <script>

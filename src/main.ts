@@ -5,6 +5,7 @@ import 'buefy/dist/buefy.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret , faAngleDoubleRight, faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import router from "./router"
 
 
 library.add(faUserSecret, faAngleDoubleRight, faCloudUploadAlt)

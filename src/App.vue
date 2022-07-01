@@ -2,8 +2,9 @@
   <div id="app" class="container">
     <nav-bar-header/>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <router-view/>
    <Hero/>
-    <sidebar/>
+    <!-- <sidebar/> -->
     <nav-bar-footer/>
   </div>
 </template>
@@ -27,7 +28,7 @@ import NavBarFooter from './components/NavBarFooter.vue';
 export default class App extends Vue {
   data() {
     return {
-      //
+      name: "app"
     };
   }
   mounted() {
