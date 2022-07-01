@@ -1,59 +1,111 @@
 <template>
     <div>
-    <b-navbar fixed-top>
-        <template #brand>
-            
-            <!-- <b-navbar-item tag="router-link" :to="{ path: '/' }"> -->
-                <b-navbar-item tag="div"><sidebar/></b-navbar-item>
-                <b-navbar-item >
-                    
-                <img
-                    src="../assets/steak-mafia.png"
-                    alt="Lightweight UI components for Vue.js based on Bulma"
-                >
-            </b-navbar-item>
-        </template>
-        <template #start>
-            <b-navbar-item href="#">
-                Home
-            </b-navbar-item>
-            <b-navbar-item href="#">
-                Documentation
-            </b-navbar-item>
-            <b-navbar-dropdown label="Info">
-                <b-navbar-item href="#">
-                    About
-                </b-navbar-item>
-                <b-navbar-item href="#">
-                    Contact
-                </b-navbar-item>
-            </b-navbar-dropdown>
-        </template>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" @click="openNav" :aria-pressed="clicked ? 'true' : closeNav">
+            <strong>Menu</strong>
+          </a>
+          
+        </div>
+      </div>
+    <div class="navbar-item">
+       
+    </div>
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="/steak-mafia.png" >
+    </a>
 
-        <template #end>
-            <b-navbar-item tag="div">
-                <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                        Log in
-                    </a>
-                </div>
-            </b-navbar-item>
-        </template>
-    </b-navbar>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        Documentation
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
     </div>
 
 </template>
 <script>
 
-import Sidebar from './Sidebar.vue'
+
 
 export default {
     name: 'NavBarHeader',
+    data() {
+        return {
+          clicked: false
+        }
+       
+    },
     components : {
-        Sidebar
+        
+    },
+    methods: {
+        openNav(event){
+            if (!this.clicked){
+                document.getElementById("sidebar").style.width='250px';
+                document.getElementById("app").style.marginLeft = "250px";
+                console.log(event.target);
+                this.clicked = true;    
+            } else {
+                this.closeNav(event);
+            }
+            
+        },
+        closeNav(event){
+            document.getElementById("sidebar").style.width = "0px";
+            console.log("closeNav " + event.target);
+            this.clicked = false;
+        }
     }
 }
 </script>

@@ -1,12 +1,12 @@
 <template>
-    <div>{{ msg }}</div>
+    <div>{{msg}}</div>
 </template>
 <script>
 
 export default ({
    data () {
       return {
-        msg: "Cards here"
+        msg: "Cards there"
       };
    },
    name: "Cards",
