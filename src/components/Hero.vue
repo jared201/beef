@@ -23,6 +23,6 @@ export default {
     {
     msg: String
   }
-  , title: 'SteakMafia Template'
+  , title: 'Beef'
 }
 </script>
