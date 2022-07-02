@@ -1,4 +1,5 @@
 
+
 .sidebar {
     height: 100%;
     width: 0;
@@ -7,9 +8,16 @@
     top: 0;
     left: 0;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     padding-top: 60px;
+    background-color: aliceblue;
+    border-style:solid;
+    border-width: .1rem;
+    border-color: #ded6d6;
+
   }
+
+  
   
   .sidebar a {
     /*padding: 8px 8px 8px 32px;*/
@@ -19,6 +27,7 @@
     display: block;
     transition: 0.3s;
     font-size: 100%;
+    border-color: #111;
   }
   
   .sidebar a:hover {
@@ -46,7 +55,7 @@
   }
   
   #main {
-    transition: margin-left .5s;
+    transition: margin-left .3s;
     padding: 16px;
   }
   
@@ -55,3 +64,5 @@
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+
+  
