@@ -6,32 +6,33 @@
   </p>
   <ul class="menu-list">
     <li><a>Dashboard</a></li>
-    <li><a>Customers</a></li>
+    <!-- <li><a>Customers</a></li> -->
   </ul>
   <p class="menu-label">
-    Administration
+    Overview
   </p>
   <ul class="menu-list">
-    <li><a>Team Settings</a></li>
+    <li><a>Elements</a></li>
     <li>
-      <a class="is-active">Manage Your Team</a>
+      <a class="is-active ">Page Samples</a>
       <ul>
-        <li><a>Members</a></li>
-        <li><a>Plugins</a></li>
-        <li><a>Add a member</a></li>
+        <li><a>Cards</a></li>
+        <li><a>Messages</a></li>
+        <li><a>Notifications</a></li>
       </ul>
     </li>
-    <li><a>Invitations</a></li>
-    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Forms</a></li>
+    <li><a>Charts and Graphs</a></li>
     <li><a>Authentication</a></li>
   </ul>
   <p class="menu-label">
-    Transactions
+    Integrations and Custom Development
   </p>
   <ul class="menu-list">
-    <li><a>Payments</a></li>
-    <li><a>Transfers</a></li>
-    <li><a>Balance</a></li>
+    <li><a>NodeJS</a></li>
+    <li><a>Spring Boot</a></li>
+    <li><a>Kafka</a></li>
+    <li><a>Mulesoft</a></li>
   </ul>
 </aside>
     <!-- <div class="block">

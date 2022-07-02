@@ -116,4 +116,8 @@ export default {
     border-color: transparent;
     color: #fff;
 }
+
+.button.button.is-primary:hover {
+    background-color: #d59a57;
+}
 </style>
