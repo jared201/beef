@@ -10,9 +10,10 @@
             
             </div>
         </div>
-        <div class="navbar-item">
+        <div class="navbar-item sidebar-sensitive">
         
         </div>
+        <div class="sidebar-sensitive">
             <a class="navbar-item" href="/">
                 <img src="/steak-mafia.png" >
             </a>
@@ -22,9 +23,10 @@
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
+        </div>
     </div>
     
-    <div id="navbar_menu" class="navbar-menu" >
+    <div id="navbar_menu" class="navbar-menu sidebar-sensitive" >
         <div class="navbar-start">
         <a class="navbar-item">
             Home
@@ -92,11 +94,11 @@ export default {
     },
     methods: {
         openNav(event){
-            if (!this.clicked){
+            if (!this.clicked || document.getElementById("sidebar").style.width=='0px'){
                 document.getElementById("sidebar").style.width='250px';
                 //document.getElementById("app").style.marginLeft = "250px";
                 console.log(event.target);
-                this.clicked = true;    
+                this.clicked = true;   
             } else {
                 this.closeNav(event);
             }
@@ -107,6 +109,7 @@ export default {
             //document.getElementById("app").style.marginLeft = "0px";
             console.log("closeNav " + event.target);
             this.clicked = false;
+            console.log(this.clicked);
         },
         openMenu(event){
             console.log(event.target);
