@@ -12,11 +12,19 @@
     Overview
   </p>
   <ul class="menu-list">
-    <li><a>Elements</a></li>
+    <li>
+      <a>Elements</a>
+      <ul>
+        <li><a>Buttons</a></li>
+        <li><a>Progress Bars</a></li>
+        <li><a>Checkboxes</a></li>
+        <li><a>Radio buttons</a></li>
+      </ul>
+    </li>
     <li>
       <a class="is-active ">Page Samples</a>
       <ul>
-        <li><a>Cards</a></li>
+        <li><router-link to="/cards">Cards</router-link></li>
         <li><a>Messages</a></li>
         <li><a>Notifications</a></li>
       </ul>
