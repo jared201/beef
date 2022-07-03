@@ -17,6 +17,7 @@
 import NavBarHeader from './components/NavBarHeader.vue'
 import NavBarFooter from './components/NavBarFooter.vue'
 import Sidebar from './components/Sidebar.vue'
+import { onMounted } from 'vue';
 
 
 export default {
@@ -25,6 +26,16 @@ export default {
     NavBarHeader,
     NavBarFooter,
     Sidebar,
+  }, 
+  setup() {
+    onMounted(() => {
+      var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
+      for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
+        sidebarSensitiveDivs[i].addEventListener('click', function(event) {
+          NavBarHeader.methods.closeNav(event);
+        });
+      }
+    })
   }
 }
 </script>

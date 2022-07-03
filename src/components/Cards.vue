@@ -1,6 +1,6 @@
 <template>
     <div>{{msg}}</div>
-    <div class="tile">
+    <div class="tile sidebar-sensitive">
    <!-- The magical tile element! -->
    <div class="tile is-ancestor">
       <div class="tile is-vertical is-8">
@@ -98,6 +98,8 @@
       </div>
 </template>
 <script>
+import { onMounted } from "vue";
+import NavBarHeaderVue from "./NavBarHeader.vue";
 
 
 export default ({
@@ -120,7 +122,17 @@ export default ({
          console.log(dateTime);
          return dateTime;
       },     
-   }
+   },
+   setup() {
+    onMounted(() => {
+      var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
+      for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
+        sidebarSensitiveDivs[i].addEventListener('click', function(event) {
+          NavBarHeaderVue.methods.closeNav(event);
+        });
+      }
+    })
+  }
 })
 </script>
 <style scoped>
