@@ -13,7 +13,7 @@
     <div class="navbar-item">
        
     </div>
-    <a class="navbar-item" href="https://bulma.io">
+    <a class="navbar-item" href="/">
       <img src="/steak-mafia.png" >
     </a>
 
@@ -93,7 +93,7 @@ export default {
         openNav(event){
             if (!this.clicked){
                 document.getElementById("sidebar").style.width='250px';
-                document.getElementById("app").style.marginLeft = "250px";
+                //document.getElementById("app").style.marginLeft = "250px";
                 console.log(event.target);
                 this.clicked = true;    
             } else {
@@ -103,6 +103,7 @@ export default {
         },
         closeNav(event){
             document.getElementById("sidebar").style.width = "0px";
+            //document.getElementById("app").style.marginLeft = "0px";
             console.log("closeNav " + event.target);
             this.clicked = false;
         }
@@ -115,5 +116,9 @@ export default {
     background-color: #d59a57;
     border-color: transparent;
     color: #fff;
+}
+
+.button.button.is-primary:hover {
+    background-color: #d59a57;
 }
 </style>
