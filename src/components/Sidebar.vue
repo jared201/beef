@@ -15,7 +15,7 @@
     <li>
       <a>Elements</a>
       <ul>
-        <li><a>Buttons</a></li>
+        <li><router-link to="/buttons">Buttons</router-link></li>
         <li><a>Progress Bars</a></li>
         <li><a>Checkboxes</a></li>
         <li><a>Radio buttons</a></li>
