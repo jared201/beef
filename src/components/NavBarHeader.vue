@@ -1,76 +1,76 @@
 <template>
     <div>
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary" @click="openNav" :aria-pressed="clicked ? 'true' : closeNav">
-            <strong>Menu</strong>
-          </a>
-          
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <div class="navbar-item">
+            <div class="buttons">
+            <a class="button is-primary" @click="openNav" :aria-pressed="clicked ? 'true' : closeNav">
+                <strong>Menu</strong>
+            </a>
+            
+            </div>
         </div>
-      </div>
-    <div class="navbar-item">
-       
+        <div class="navbar-item">
+        
+        </div>
+            <a class="navbar-item" href="/">
+                <img src="/steak-mafia.png" >
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click="openMenu" >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
     </div>
-    <a class="navbar-item" href="/">
-      <img src="/steak-mafia.png" >
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
-
-      <a class="navbar-item">
-        Documentation
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
+    
+    <div id="navbar_menu" class="navbar-menu" >
+        <div class="navbar-start">
+        <a class="navbar-item">
+            Home
         </a>
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      </div>
-    </div>
+        <a class="navbar-item">
+            Documentation
+        </a>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+            More
+            </a>
+
+            <div class="navbar-dropdown">
+            <a class="navbar-item">
+                About
+            </a>
+            <a class="navbar-item">
+                Jobs
+            </a>
+            <a class="navbar-item">
+                Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+                Report an issue
+            </a>
+            </div>
         </div>
-      </div>
+        </div>
+
+        <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+            <a class="button is-primary">
+                <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+                Log in
+            </a>
+            </div>
+        </div>
+        </div>
     </div>
-  </div>
-</nav>
+        </nav>
     </div>
 
 </template>
@@ -82,7 +82,8 @@ export default {
     name: 'NavBarHeader',
     data() {
         return {
-          clicked: false
+          clicked: false,
+          is_active: "",
         }
        
     },
@@ -106,6 +107,13 @@ export default {
             //document.getElementById("app").style.marginLeft = "0px";
             console.log("closeNav " + event.target);
             this.clicked = false;
+        },
+        openMenu(event){
+            console.log(event.target);
+            this.is_active = "is-active";
+            console.log(this.is_active)
+            const element = document.getElementById("navbar_menu")
+            element.classList.toggle("is-active") //<--- use something that fucking works!
         }
     }
 }

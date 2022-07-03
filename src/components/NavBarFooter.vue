@@ -1,6 +1,6 @@
 <template>
-<footer class="navbar is-fixed-bottom" >
-  <div class="navbar-item content has-text-centered">
+<footer class="footer is-fixed-bottom" >
+  <div class="content has-text-centered">
     <div>
       <p>
         <strong>Beef Dashboard Template</strong> by <a href="https://main.hueburg.com">Hueburg Solutions Consultancy, Inc.</a> Copyright {{ year }} 
