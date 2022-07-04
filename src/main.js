@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css'
 import './assets/sideber.css'
 import Cards from './components/Cards.vue'
 import { createRouter , createWebHashHistory }from 'vue-router'
-// import Buttons from "./components/Buttons.vue"
+import Buttons from "./components/Buttons.vue"
 
 const routes = [
     {
@@ -19,13 +19,13 @@ const routes = [
         name: "Cards",
         component: Cards
     },
-    /*
+    
     {
         path: "/buttons",
         name: "Buttons",
         component: Buttons
     }
-    */
+    
   
 ]
 
