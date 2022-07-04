@@ -7,7 +7,7 @@ import './assets/sideber.css'
 import Cards from './components/Cards.vue'
 import { createRouter , createWebHashHistory }from 'vue-router'
 import Buttons from "./components/Buttons.vue"
-
+import ProgressBar from "./components/ProgressBar.vue"
 const routes = [
     {
         path: "/",
@@ -24,6 +24,11 @@ const routes = [
         path: "/buttons",
         name: "Buttons",
         component: Buttons
+    },
+    {
+        path: "/progress",
+        name: "Progress",
+        component: ProgressBar,   
     }
     
   
