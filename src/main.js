@@ -8,6 +8,8 @@ import Cards from './components/Cards.vue'
 import { createRouter , createWebHashHistory }from 'vue-router'
 import Buttons from "./components/Buttons.vue"
 import ProgressBar from "./components/ProgressBar.vue"
+import Checkbox from './components/Checkbox.vue'
+
 const routes = [
     {
         path: "/",
@@ -29,6 +31,11 @@ const routes = [
         path: "/progress",
         name: "Progress",
         component: ProgressBar,   
+    },
+    {
+        path: "/checkbox",
+        name: "Checkbox",
+        component: Checkbox
     }
     
   
