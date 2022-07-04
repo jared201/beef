@@ -1,5 +1,5 @@
 <template>
-<footer class="footer is-fixed-bottom" >
+<footer class="footer is-fixed-bottom sidebar-sensitive" >
   <div class="content has-text-centered">
     <div>
       <p>
@@ -11,6 +11,8 @@
 
 </template>
 <script>
+import { onMounted } from 'vue';
+import NavBarHeaderVue from './NavBarHeader.vue';
 
 export default {
     name: 'NavBarFooter',
@@ -25,7 +27,17 @@ export default {
         const year = date.getFullYear();
         return year;
       }
-    }
+    }, 
+    setup() {
+    onMounted(() => {
+      var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
+      for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
+        sidebarSensitiveDivs[i].addEventListener('click', function(event) {
+          NavBarHeaderVue.methods.closeNav(event);
+        });
+      }
+    })
+  }
 }
 </script>
 

@@ -19,11 +19,13 @@ const routes = [
         name: "Cards",
         component: Cards
     },
+    
     {
         path: "/buttons",
         name: "Buttons",
         component: Buttons
     }
+    
   
 ]
 
