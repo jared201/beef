@@ -17,7 +17,7 @@
       <ul>
         <li><router-link to="/buttons">Buttons</router-link></li>
         <li><router-link to="/progress">Progress Bars</router-link></li>
-        <li><a>Checkboxes</a></li>
+        <li><router-link to="/checkbox">Checkbox</router-link></li>
         <li><a>Radio buttons</a></li>
       </ul>
     </li>
@@ -31,6 +31,8 @@
     </li>
     <li><a>Forms</a></li>
     <li><a>Charts and Graphs</a></li>
+    <li><a>Kiosk Demo</a></li>
+    <li><a>POS Demo</a></li>
     <li><a>Authentication</a></li>
   </ul>
   <p class="menu-label">
