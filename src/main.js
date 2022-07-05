@@ -9,6 +9,7 @@ import { createRouter , createWebHashHistory }from 'vue-router'
 import Buttons from "./components/Buttons.vue"
 import ProgressBar from "./components/ProgressBar.vue"
 import Checkbox from './components/Checkbox.vue'
+import Radio from './components/Radio.vue'
 
 const routes = [
     {
@@ -36,9 +37,13 @@ const routes = [
         path: "/checkbox",
         name: "Checkbox",
         component: Checkbox
-    }
+    },
+    {
+        path: "/radio",
+        name: "Radio",
+        component: Radio,
+    },
     
-  
 ]
 
 const router = createRouter ({

@@ -18,7 +18,7 @@
         <li><router-link to="/buttons">Buttons</router-link></li>
         <li><router-link to="/progress">Progress Bars</router-link></li>
         <li><router-link to="/checkbox">Checkbox</router-link></li>
-        <li><a>Radio buttons</a></li>
+        <li><router-link to="/radio">Radio buttons</router-link></li>
       </ul>
     </li>
     <li>
