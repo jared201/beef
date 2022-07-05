@@ -1,6 +1,6 @@
 <template>
     <div><p>{{ msg }}</p></div>
-    <div class="tile is-ancestor">
+    <div class="tile is-ancestor sidebar-sensitive">
     <div class="tile is-vertical is-8">
         <div class="tile">
         <div class="tile is-parent is-vertical">
@@ -72,7 +72,20 @@
     </div>    
 </template>
 <script>
+import { onMounted } from 'vue'
+import NavBarHeader from './NavBarHeader.vue'
+
 export default {
+    setup() {
+        onMounted(() => {
+            var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
+            for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
+                sidebarSensitiveDivs[i].addEventListener('click', function(event) {
+                NavBarHeader.methods.closeNav(event);
+                });
+            }
+        })        
+    },
     data () {
         return {
             name: "Buttons",
