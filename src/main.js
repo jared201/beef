@@ -10,7 +10,7 @@ import Buttons from "./components/Buttons.vue"
 import ProgressBar from "./components/ProgressBar.vue"
 import Checkbox from './components/Checkbox.vue'
 import Radio from './components/Radio.vue'
-
+import Message from "./components/Message.vue"
 const routes = [
     {
         path: "/",
@@ -42,6 +42,11 @@ const routes = [
         path: "/radio",
         name: "Radio",
         component: Radio,
+    },
+    {
+        path: "/message",
+        name: "Message",
+        component: Message
     },
     
 ]

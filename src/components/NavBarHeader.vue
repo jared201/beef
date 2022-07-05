@@ -28,12 +28,9 @@
     
     <div id="navbar_menu" class="navbar-menu sidebar-sensitive" >
         <div class="navbar-start">
+        <router-link to="/" class="navbar-item">Home</router-link>                
         <a class="navbar-item">
-            Home
-        </a>
-
-        <a class="navbar-item">
-            Documentation
+            Pricing
         </a>
 
         <div class="navbar-item has-dropdown is-hoverable">
