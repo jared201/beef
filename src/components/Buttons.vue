@@ -1,6 +1,6 @@
 <template>
     <div><p>{{ msg }}</p></div>
-    <div class="tile is-ancestor">
+    <div class="tile is-ancestor sidebar-sensitive">
     <div class="tile is-vertical is-8">
         <div class="tile">
         <div class="tile is-parent is-vertical">
