@@ -11,6 +11,8 @@ import ProgressBar from "./components/ProgressBar.vue"
 import Checkbox from './components/Checkbox.vue'
 import Radio from './components/Radio.vue'
 import Message from "./components/Message.vue"
+import Notifications from "./components/Notifications.vue"
+
 const routes = [
     {
         path: "/",
@@ -47,6 +49,11 @@ const routes = [
         path: "/message",
         name: "Message",
         component: Message
+    },
+    {
+        path: "/notifications",
+        name: "Notifications",
+        component: Notifications,
     },
     
 ]

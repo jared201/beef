@@ -26,7 +26,7 @@
       <ul>
         <li><router-link to="/cards">Cards</router-link></li>
         <li><router-link to="/message">Messages</router-link></li>
-        <li><a>Notifications</a></li>
+        <li><router-link to="/notifications">Notifications</router-link></li>
       </ul>
     </li>
     <li><a>Forms</a></li>
