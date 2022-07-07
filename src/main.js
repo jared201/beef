@@ -24,6 +24,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 
 const routes = [
     {
@@ -79,7 +80,7 @@ const router = createRouter ({
     routes,
 })
 library.add(faEnvelope);
-library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, faUpload);
+library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, faUpload, faGlobeAmericas);
 
 const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon)
