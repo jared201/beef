@@ -29,7 +29,7 @@
         <li><router-link to="/notifications">Notifications</router-link></li>
       </ul>
     </li>
-    <li><a>Forms</a></li>
+    <li><router-link to="/forms">Forms</router-link></li>
     <li><a>Charts and Graphs</a></li>
     <li><a>Kiosk Demo</a></li>
     <li><a>POS Demo</a></li>
