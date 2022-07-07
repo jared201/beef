@@ -156,7 +156,7 @@
                                 <option value="Colombia">Colombia</option>
                                 <option value="Ecuador">Ecuador</option>
                                 <option value="Guyana">Guyana</option>
-                                <option value="Philippines">Philipines</option>
+                                <option value="Philippines">Philippines</option>
                                 <option value="Peru">Peru</option>
                                 <option value="Suriname">Suriname</option>
                                 <option value="Uruguay">Uruguay</option>
