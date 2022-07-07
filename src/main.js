@@ -12,6 +12,18 @@ import Checkbox from './components/Checkbox.vue'
 import Radio from './components/Radio.vue'
 import Message from "./components/Message.vue"
 import Notifications from "./components/Notifications.vue"
+import Forms from "./components/Forms.vue"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faLock } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar } from '@fortawesome/free-solid-svg-icons'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { faUpload } from '@fortawesome/free-solid-svg-icons'
 
 const routes = [
     {
@@ -55,15 +67,22 @@ const routes = [
         name: "Notifications",
         component: Notifications,
     },
-    
+    {
+        path: "/forms",
+        name: "Forms",
+        component: Forms,
+    }
 ]
 
 const router = createRouter ({
     history: createWebHashHistory(),
     routes,
 })
+library.add(faEnvelope);
+library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, faUpload);
 
 const app = createApp(App);
+app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router);
 app.mount('#app');
 
