@@ -87,11 +87,11 @@
                         <textarea class="textarea" placeholder="0/250 characters"></textarea>
                     </div>
                     <div class="content">
-                        <buttons class="button has-icons-left is-info">
+                        <button class="button has-icons-left is-info">
                         <span class="icon">                            
                             <i class="fas fa-bold"><font-awesome-icon :icon="['fas', 'paper-plane']"></font-awesome-icon></i>
                         </span><p>Send Message</p>
-                        </buttons>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -100,6 +100,7 @@
                     <div class=" is-child notification panel-heading is-danger">
                         Question Form
                     </div>
+                    
                 </div>
 
             </div>
@@ -108,7 +109,25 @@
             <div class="column">
                 <div class=" is-parent notification">
                     <div class=" is-child notification panel-heading is-dark">
-                        Send Form
+                        Upload Form
+                    </div>
+                    <div class="content">
+                        <div class="file">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="resume" @change="uploadFile">
+                                <span class="file-cta">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i><font-awesome-icon :icon="['fas', 'upload']"></font-awesome-icon>
+                                </span>
+                                <span class="file-label">
+                                    Choose a file…
+                                </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <progress id="progress" class="progress is-success"  value="0" max="100">{{progres}}%</progress>
                     </div>
                 </div>
             </div>
@@ -140,9 +159,36 @@ export default {
     data() {
         return {
             msg: "Forms demo here",
+            progres: "1",
+        }
+    },
+    methods: {
+        uploadFile(event){
+            console.log(event.target.files);
+            //run the progress bar
+            const prog = document.getElementById("progress");            
+            loop(prog);
         }
     }
 }
+
+
+let x = 0;
+
+function loop (prog) { 
+    console.log("looping: " + x)
+    prog.value++
+    setTimeout(()=> {        
+        x++;
+        if ( x < 100){          
+          loop(prog);          
+        } else {
+            return;
+        }        
+    }, 300)
+    
+}
+
 </script>
 <style>
 
