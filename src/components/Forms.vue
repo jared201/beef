@@ -100,7 +100,16 @@
                     <div class=" is-child notification panel-heading is-danger">
                         Question Form
                     </div>
-                    
+                    <div class="control tile is-child">
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        Male
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        Female
+                    </label>
+                </div>
                 </div>
 
             </div>
