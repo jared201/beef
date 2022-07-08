@@ -4,6 +4,7 @@ import App from './App.vue'
 import { createApp } from 'vue'
 import 'bulma/css/bulma.css'
 import './assets/sideber.css'
+import 'svgmap/dist/svgMap.min.css'
 import Cards from './components/Cards.vue'
 import { createRouter , createWebHashHistory }from 'vue-router'
 import Buttons from "./components/Buttons.vue"
@@ -25,6 +26,7 @@ import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
+import Charts from './components/Charts.vue'
 
 const routes = [
     {
@@ -72,13 +74,25 @@ const routes = [
         path: "/forms",
         name: "Forms",
         component: Forms,
+    },
+    {
+        path: "/charts/:location",
+        name: "Charts",
+        component: Charts
+    },
+    {
+        path: "/charts",
+        name: "NoLocation", //name should always be unique
+        component: Charts,
     }
+    
 ]
 
 const router = createRouter ({
     history: createWebHashHistory(),
     routes,
 })
+
 library.add(faEnvelope);
 library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, faUpload, faGlobeAmericas);
 
