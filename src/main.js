@@ -4,6 +4,7 @@ import App from './App.vue'
 import { createApp } from 'vue'
 import 'bulma/css/bulma.css'
 import './assets/sideber.css'
+import 'svgmap/dist/svgMap.min.css'
 import Cards from './components/Cards.vue'
 import { createRouter , createWebHashHistory }from 'vue-router'
 import Buttons from "./components/Buttons.vue"
@@ -81,7 +82,7 @@ const routes = [
     },
     {
         path: "/charts",
-        name: "NoLocation",
+        name: "NoLocation", //name should always be unique
         component: Charts,
     }
     

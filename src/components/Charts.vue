@@ -9,11 +9,11 @@
             <div class="card">
                 <header class="card-header has-background-info">
                     <p class="card-header-title">
-                        Trend 1
+                        1Q 2022 Covid Infection
                     </p>
                 </header>
                 <div class="card-content message is-info">
-                    Chart here
+                    <BarChart/>
                 </div>
             </div>
         </div>
@@ -21,11 +21,11 @@
             <div class="card">
                 <header class="card-header has-background-warning">
                     <p class="card-header-title">
-                        Trend 2
+                        2Q 2022 Bitcoin Price
                     </p>
                 </header>
                 <div class="card-content message is-warning">
-                    Chart here
+                    <LinearChart/>
                 </div>
             </div>
         </div>
@@ -33,11 +33,11 @@
             <div class="card">
                 <header class="card-header has-background-success">
                     <p class="card-header-title">
-                        Trend 3
+                        Unvaccinated Coverage
                     </p>
                 </header>
                 <div class="card-content message is-success">
-                    Chart here
+                    <PieChart/>
                 </div>
             </div>
         </div>
@@ -80,16 +80,16 @@
             </div>
         </div>
     </div>
-    <div class="columns">
+    <div class="columns sidebar-sensitive">
         <div class="column">
             <div class="card">
                 <header class="card-header has-background-danger">
                     <p class="card-header-title">
-                        Another Trend Graph
+                        A Bubble Graph
                     </p>
                 </header>
                 <div class="card-content message is-danger">
-                    Chart here
+                   <BubbleChartVue/>
                 </div>
             </div>
         </div>
@@ -98,7 +98,10 @@
 <script>
 import { onMounted } from 'vue'
 import NavBarHeaderVue from './NavBarHeader.vue'
-
+import BarChart from './BarChart.vue'
+import LinearChart from './LinearChart.vue'
+import PieChart from './PieChart.vue'
+import BubbleChartVue from './BubbleChart.vue'
 
 function weather (d, s, id) 
     {
@@ -126,48 +129,50 @@ export default {
         onMounted(() => {
             var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
             for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
-                sidebarSensitiveDivs[i].addEventListener('click', function(event) {
-                NavBarHeaderVue.methods.closeNav(event);
+                sidebarSensitiveDivs[i].addEventListener("click", function (event) {
+                    NavBarHeaderVue.methods.closeNav(event);
                 });
             }
             //console.log(this.$route.params.location);
-            weather(document, 'script', 'tomorrow-sdk');           
-        })
-
+            weather(document, "script", "tomorrow-sdk");
+        });
     },
     data() {
         return {
-            msg: "Charts and Graphs here",
+            msg: "Charts and Graphs Examples here",
             location: this.$route.params.location,
             key: 0,
-        }
+            
+        };
     },
-    methods : {
-        changeLocation (event){
+    methods: {
+        changeLocation(event) {
             const dom = document.getElementById("tomorrow");
             console.log("location: " + this.location);
-            this.location =  event.target.value
+            this.location = event.target.value;
             console.log(this.location);
-            dom.dataset.locationId=this.location;
+            dom.dataset.locationId = this.location;
             console.log("re-render widget");
             const iframe = document.getElementsByTagName("iframe")[0];
-            iframe.dataset.locationId=this.location;
-            
+            iframe.dataset.locationId = this.location;
             //console.log(iframe)
             const path = "/charts/" + this.location;
             this.$router.push(path);
-            
-            weather(document, 'script', 'tomorrow-sdk');
+            weather(document, "script", "tomorrow-sdk");
             //this.$router.go();
-            
             console.log(this.$route.fullPath);
-            
         },
-        forceUpdate(name){
+        forceUpdate(name) {
             console.log(name);
             this.key++;
         },
-    }
+    },
+    components: { 
+        BarChart,
+        LinearChart, 
+        PieChart,
+        BubbleChartVue,
+    },
 }
 
 
