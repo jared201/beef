@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css'
 import './assets/sideber.css'
 import 'svgmap/dist/svgMap.min.css'
 import Cards from './components/Cards.vue'
-import { createRouter , createWebHashHistory }from 'vue-router'
+import { createRouter , createWebHistory }from 'vue-router'
 import Buttons from "./components/Buttons.vue"
 import ProgressBar from "./components/ProgressBar.vue"
 import Checkbox from './components/Checkbox.vue'
@@ -27,6 +27,7 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import Charts from './components/Charts.vue'
+import TrainKiosk from './components/TrainKiosk.vue'
 
 const routes = [
     {
@@ -84,12 +85,17 @@ const routes = [
         path: "/charts",
         name: "NoLocation", //name should always be unique
         component: Charts,
+    },
+    {
+        path: "/train",
+        name: "TrainKiosk",
+        component: TrainKiosk
     }
     
 ]
 
 const router = createRouter ({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes,
 })
 
