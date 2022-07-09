@@ -90,7 +90,7 @@
                     </div>
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-danger mb-2 mt-2"><strong>P2,000</strong></button>
+                            <button class="button is-large is-danger mb-2 mt-2" @click="openPayModal"><strong>P2,000</strong></button>
                         </div>                        
                     </div>                    
                 </div>            
@@ -98,11 +98,24 @@
         </div>
         
     </div>
+    <div class="modal" id="pay">
+        <div class="modal-background" @click="closePayModal"></div>
+        <div class="modal-content has-background-light">
+            <div class="panel">
+                <div class="panel-heading">
+                    {{pay_header}}
+                </div>
+                <Payments/>
+            </div>
+        </div>
+    </div>
 </template>
 <script>
 
+import Payments from './Payments.vue'
 export default {
-  components: { },
+
+  components: { Payments },
     name: "MainOptions",
     setup() {
        
@@ -114,6 +127,7 @@ export default {
             price_img: require('../assets/manila-map-metro-1.png'),
             value_title: "Choose ticket value",
             top_up_title: "Choose top-up value",
+            pay_header : "Choose available payments",
         }
     },
     methods: {
@@ -132,6 +146,19 @@ export default {
             this.value_title = "Choose top-up value"
             const price = document.getElementById("price");
             price.classList.toggle('is-active');
+        },
+        openPayModal(event){
+            console.log(event.target);
+            const price = document.getElementById("price");
+            const pay = document.getElementById("pay");
+            price.classList.toggle('is-active');
+            pay.classList.toggle('is-active');            
+        },
+        closePayModal(event){
+            console.log(event.target);
+            
+            const pay = document.getElementById("pay");            
+            pay.classList.toggle('is-active');  
         }
     }
 }
