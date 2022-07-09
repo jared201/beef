@@ -11,16 +11,18 @@
         </div>
     </div>    
   </section>
+  <Weather/>
   <MainOptionsVue />
 </template>
 <script>
 import NavBarHeaderVue from './NavBarHeader.vue';
 import { onMounted } from 'vue';
 import MainOptionsVue from './MainOptions.vue';
+import Weather from './Weather.vue';
 
 export default {
   name: 'TrainKiosks',
-  components: { MainOptionsVue },
+  components: { MainOptionsVue, Weather },
   props:
     {
     msg: String
