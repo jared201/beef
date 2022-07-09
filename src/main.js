@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css'
 import './assets/sideber.css'
 import 'svgmap/dist/svgMap.min.css'
 import Cards from './components/Cards.vue'
-import { createRouter , createWebHistory }from 'vue-router'
+import { createRouter , createWebHashHistory }from 'vue-router'
 import Buttons from "./components/Buttons.vue"
 import ProgressBar from "./components/ProgressBar.vue"
 import Checkbox from './components/Checkbox.vue'
@@ -95,7 +95,7 @@ const routes = [
 ]
 
 const router = createRouter ({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 })
 
