@@ -13,17 +13,17 @@
         <div class="navbar-item sidebar-sensitive">
         
         </div>
-        <div class="sidebar-sensitive">
+        <!-- <div class="sidebar-sensitive level"> -->
             <a class="navbar-item" href="/">
                 <img src="/steak-mafia.png" >
             </a>
 
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click="openMenu" >
+            <a role="button" class="navbar-burger navbar-end sidebar-sensitive" aria-label="menu" aria-expanded="false"  data-target="navbarBasicExample" @click="openMenu" >
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
-        </div>
+        <!-- </div> -->
     </div>
     
     <div id="navbar_menu" class="navbar-menu sidebar-sensitive" >
