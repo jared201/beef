@@ -11,24 +11,40 @@
   <p class="menu-label">
     Overview
   </p>
+  <accordion class="accordion">
+    <template v-slot:title>
+      <span class="font-semibold text-xl">Elements</span>
+    </template>
+    <template v-slot:content>
+      <ul class="menu-list">
+        <li>
+          <ul>
+            <li><router-link to="/buttons">Buttons</router-link></li>
+            <li><router-link to="/progress">Progress Bars</router-link></li>
+            <li><router-link to="/checkbox">Checkbox</router-link></li>
+            <li><router-link to="/radio">Radio buttons</router-link></li>
+          </ul>
+        </li>
+      </ul>
+    </template>
+  </accordion>
+  <accordion class="accordion">
+    <template v-slot:title>
+      <span class="font-semibold text-xl">Page Samples</span>
+    </template>
+    <template v-slot:content>
+     <ul class="menu-list">
+      <li>
+        <ul>
+          <li><router-link to="/cards">Cards</router-link></li>
+          <li><router-link to="/message">Messages</router-link></li>
+          <li><router-link to="/notifications">Notifications</router-link></li>
+        </ul>
+      </li>
+  </ul>
+    </template>
+  </accordion>
   <ul class="menu-list">
-    <li>
-      <a>Elements</a>
-      <ul>
-        <li><router-link to="/buttons">Buttons</router-link></li>
-        <li><router-link to="/progress">Progress Bars</router-link></li>
-        <li><router-link to="/checkbox">Checkbox</router-link></li>
-        <li><router-link to="/radio">Radio buttons</router-link></li>
-      </ul>
-    </li>
-    <li>
-      <a class="is-active ">Page Samples</a>
-      <ul>
-        <li><router-link to="/cards">Cards</router-link></li>
-        <li><router-link to="/message">Messages</router-link></li>
-        <li><router-link to="/notifications">Notifications</router-link></li>
-      </ul>
-    </li>
     <li><router-link to="/forms">Forms</router-link></li>
     <li><router-link to="/charts">Charts and Graphs</router-link></li>
     <li><router-link to="/train">Kiosk Demo</router-link></li>
@@ -66,6 +82,7 @@
   </section>
 </template>
 <script>
+import Accordion from './Accordion.vue';
 
 export default {
   data() {
@@ -76,6 +93,9 @@ export default {
       fullwidth: false,
       right: false
     };
+  },
+  components: {
+      Accordion
   }
 };
 </script>

@@ -19,7 +19,7 @@
 
   
   
-  .sidebar a {
+  .sidebar a, .accordion-btn {
     /*padding: 8px 8px 8px 32px;*/
     text-align: left;
     text-decoration: none;
@@ -30,8 +30,9 @@
     border-color: #111;
   }
   
-  .sidebar a:hover {
+  .sidebar a:hover, .menu-list button:hover, .accordion-btn:hover{
     color: #f1f1f1;
+    background-color:#ccc
   }
   
   .sidebar .closebtn {
@@ -65,4 +66,38 @@
     .sidebar a {font-size: 18px;}
   }
 
-  
+.accordion-btn {
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    padding-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.accordion-panel {
+  display: none;
+  overflow: hidden;
+}
+
+.accordion-icon {
+  display: flex;
+  justify-content: flex-end;
+  height: 18px;
+  align-self: center;
+}
+
+.active {
+  background-color: #485FC7;
+  color: white;
+}
