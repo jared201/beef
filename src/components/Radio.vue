@@ -37,6 +37,7 @@
 import { onMounted } from 'vue'
 import NavBarHeader from './NavBarHeader.vue';
 
+
 export default {
     setup() {
         onMounted(() => {
@@ -52,7 +53,7 @@ export default {
         return {
             msg: "Radio buttons are here",
         }
-    },
+    }
 }
 </script>
 <style>
