@@ -29,6 +29,7 @@ import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import Charts from './components/Charts.vue'
 import TrainKiosk from './components/TrainKiosk.vue'
 
+
 const routes = [
     {
         path: "/",
