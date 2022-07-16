@@ -35,6 +35,8 @@
     </div>
 </template>
 <script>
+
+
 export default {
     name : "PointOfSale",
     setup() {
@@ -44,6 +46,9 @@ export default {
         return {
             msg: "Point of sale demo"
         }
+    },
+    components: { 
+        //Kioskboard,
     }
 }
 </script>
