@@ -1,11 +1,12 @@
 <template>
     <div class="container has-background-light sidebar-sensitive">
-        <div class="panel-heading has-background-info">Point Of Sale Demo </div>
-        <div class="tile is-ancestor">
+        <div class="panel-heading has-background-info">Point Of Sale Demo Tap Item to Add </div>
+        <div class="tile is-ancestor"> 
+            
             <div class="tile is-parent">
                 <div class="tile is-parent ">                    
                     <div class="tile is-child is-warning">
-                       Left Column
+                      
                        <div class="image">
                             <img :src="burger"/>
                        </div>
@@ -20,37 +21,49 @@
                        </div>
                     </div>
                     <div class="tile is-child ">
-                        <div class="message">Second column</div>                    
-                        <div class="tile  notification is-warning pb-6">
+                        <div class="message"></div>                    
+                        <div class="tile  notification is-warning pt-6 pb-6 ml-4">
                             <strong>Burger</strong>
                         </div>
-                        <div class="tile notification is-warning pb-6  pt-6">
+                        <div class="tile notification is-warning pb-6  pt-6 mb-6 mt-6 ml-4">
                             <p class="is-centered"><strong>Chicken</strong></p>
                         </div>
-                        <div class="tile notification is-warning">
-                            <p class="pt-6"><strong>Fries</strong></p>
+                        <div class="tile notification is-warning pb-auto ml-4">
+                            <p class="mt-6 pb-6"><strong>Fries</strong></p>
                         </div>
-                        <div class="tile notification is-warning ">
-                            <p class="pt-6"><strong>Pizza</strong></p>
+                        <div class="tile notification is-warning pt-3 mt-6 ml-4">
+                            <p class="pb-3 pt-6 mt-auto mb-auto"><strong>Pizza</strong></p>
                         </div>
                     </div>
                     <div class="tile is-child">
-                        <div class="message">Third Column</div>
+                        <div class="message"></div>
+                        <div class="tile  notification is-danger pt-6 pb-6 pr-3 ml-4">
+                            <strong>$5.00</strong>
+                        </div>
+                        <div class="tile notification is-danger pb-6  pt-6 mb-6 mt-6 ml-4">
+                            <p class="is-centered"><strong>$3.00</strong></p>
+                        </div>
+                        <div class="tile notification is-danger pb-auto ml-4">
+                            <p class="mt-6 pb-6"><strong>$0.99</strong></p>
+                        </div>
+                        <div class="tile notification is-danger pt-3 mt-6 ml-4">
+                            <p class="pb-3 pt-6 mt-auto mb-auto"><strong>$15.99</strong></p>
+                        </div>
                     </div>
                 </div>
                 
             </div>
-            <div class="column">
-                <div class="panel">
-                    <div class="notification is-primary">
+            <div class="tile is-parent is-vertical mt-6">
+                <div class="tile is-child  mt-3 ">
+                    <div class="tile is-vertical notification is-primary ">
                         <strong>Tap the white box below to bring up the keypad</strong>
-                        <input class="input is-large align-right js-kioskboard-input" data-kioskboard-type="numpad"
+                        <input class="input is-large align-right js-kioskboard-input has-background-light " data-kioskboard-type="numpad"
                             data-kioskboard-placement="bottom" data-kioskboard-theme="flat" readonly type="text" placeholder="$0.00"/>                            
                     </div>
                     
                 </div>
-                <div class="panel">
-                    <div class="notification is-primary ">
+                <div class="tile is-child ">
+                    <div class=" tile notification is-primary pb-12">
                         Right column Second Row
                     </div>
                 </div>
