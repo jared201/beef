@@ -5,7 +5,7 @@ import { createApp } from 'vue'
 import 'bulma/css/bulma.css'
 import './assets/sideber.css'
 import 'svgmap/dist/svgMap.min.css'
-import ''
+import 'kioskboard/dist/kioskboard-2.2.0.min.css'
 import Cards from './components/Cards.vue'
 import { createRouter , createWebHashHistory }from 'vue-router'
 import Buttons from "./components/Buttons.vue"
