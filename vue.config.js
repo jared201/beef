@@ -1,2 +1,2 @@
 // vue.config.js
-export const runTimeCompiler = true;
+const runTimeCompiler = true;

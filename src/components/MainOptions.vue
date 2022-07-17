@@ -46,46 +46,46 @@
                 <div class="columns">
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-info mb-2 mt-2"><strong>P150</strong></button>
+                            <button class="button is-large is-info mb-2 mt-2" @click="openPayModal"><strong>P150</strong></button>
                         </div>                        
                     </div>
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-info mb-2 mt-2"><strong>P200</strong></button>
+                            <button class="button is-large is-info mb-2 mt-2" @click="openPayModal"><strong>P200</strong></button>
                         </div>                        
                     </div>
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-info mb-2 mt-2"><strong>P250</strong></button>
+                            <button class="button is-large is-info mb-2 mt-2" @click="openPayModal"><strong>P250</strong></button>
                         </div>                        
                     </div>                    
                 </div>
                 <div class="columns">
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-warning mb-2 mt-2"><strong>P300</strong></button>
+                            <button class="button is-large is-warning mb-2 mt-2" @click="openPayModal"><strong>P300</strong></button>
                         </div>                        
                     </div>
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-warning mb-2 mt-2"><strong>P400</strong></button>
+                            <button class="button is-large is-warning mb-2 mt-2" @click="openPayModal"><strong>P400</strong></button>
                         </div>                        
                     </div>
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-warning mb-2 mt-2"><strong>P500</strong></button>
+                            <button class="button is-large is-warning mb-2 mt-2" @click="openPayModal"><strong>P500</strong></button>
                         </div>                        
                     </div>                    
                 </div>
                 <div class="columns">
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-danger mb-2 mt-2"><strong>P1,000</strong></button>
+                            <button class="button is-large is-danger mb-2 mt-2" @click="openPayModal"><strong>P1,000</strong></button>
                         </div>                        
                     </div>
                     <div class="column">
                         <div class="panel has-background-grey-light">
-                            <button class="button is-large is-danger mb-2 mt-2"><strong>P1,500</strong></button>
+                            <button class="button is-large is-danger mb-2 mt-2" @click="openPayModal"><strong>P1,500</strong></button>
                         </div>                        
                     </div>
                     <div class="column">

@@ -28,6 +28,7 @@ import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import Charts from './components/Charts.vue'
 import TrainKiosk from './components/TrainKiosk.vue'
+import PointOfSale from './components/PointOfSale.vue'
 
 
 const routes = [
@@ -91,6 +92,11 @@ const routes = [
         path: "/train",
         name: "TrainKiosk",
         component: TrainKiosk
+    },
+    {
+        path: "/pos",
+        name: "PointOfSale",
+        component: PointOfSale,
     }
     
 ]
