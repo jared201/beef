@@ -58,15 +58,15 @@
                     <div class="tile is-vertical notification is-primary ">
                         <strong>Tap the white box below to bring up the keypad</strong>
                         <input class="input is-large align-right js-kioskboard-input has-background-light " data-kioskboard-type="numpad"
-                            data-kioskboard-placement="bottom" data-kioskboard-theme="flat" readonly type="text" placeholder="$0.00"/>                            
+                            data-kioskboard-placement="bottom" data-kioskboard-theme="flat" readonly type="number" placeholder="$0.00"/>                            
                     </div>
-                    
-                </div>
-                <div class="tile is-child ">
+                    <div class="tile is-child ">
                     <div class=" tile notification is-primary pb-12">
                         Right column Second Row
                     </div>
                 </div>
+                </div>
+                
             </div>
         </div>                        
     </div>
