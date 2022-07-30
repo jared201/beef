@@ -27,6 +27,7 @@ import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import Charts from './components/Charts.vue'
 import TrainKiosk from './components/TrainKiosk.vue'
 import PointOfSale from './components/PointOfSale.vue'
@@ -108,9 +109,11 @@ const router = createRouter ({
 })
 
 library.add(faEnvelope);
-library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, faUpload, faGlobeAmericas);
+library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, 
+    faUpload, faGlobeAmericas, faGithub);
 
 const app = createApp(App);
+
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router);
 app.mount('#app');
