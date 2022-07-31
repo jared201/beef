@@ -11,14 +11,16 @@
         </div>
     </div>
   </section>
+  <Palette/>
 </template>
 <script>
 import NavBarHeaderVue from './NavBarHeader.vue';
 import { onMounted } from 'vue';
+import Palette from './Palette.vue';
 
 export default {
   name: 'Hero',
-  components: { },
+  components: { Palette },
   props:
     {
     msg: String

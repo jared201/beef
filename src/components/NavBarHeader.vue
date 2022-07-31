@@ -65,7 +65,7 @@
                 </span>
                 <strong>Follow us on Github</strong>            
             </a>
-            <a class="button is-warning gumroad-button" target="_blank" href="https://jared201.gumroad.com/l/beef">
+            <a class="button is-success gumroad-button" target="_blank" href="https://jared201.gumroad.com/l/beef">
                 Get Latest Release from Gumroad
             </a>
             </div>
