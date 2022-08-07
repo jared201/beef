@@ -1,5 +1,5 @@
 <template>
-  <Bar
+  <Line
     :chart-options="chartOptions"
     :chart-data="chartData"
     :chart-id="chartId"
@@ -13,18 +13,18 @@
 </template>
 
 <script>
-import { Bar } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+import { Line } from 'vue-chartjs'
+import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale } from 'chart.js'
 
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+ChartJS.register(Title, Tooltip, Legend, CategoryScale, LinearScale, LineElement, PointElement)
 
 export default {
-  name: 'BarChart',
-  components: { Bar },
+  name: 'LinearChart',
+  components: { Line },
   props: {
     chartId: {
       type: String,
-      default: 'bar-chart'
+      default: 'line-chart'
     },
     datasetIdKey: {
       type: String,
@@ -54,20 +54,10 @@ export default {
   data() {
     return {
       chartData: {
-        labels: [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ],
-        datasets: [ { data: [40, 20, 12, 50, 100, 25, 75],
-                      label: 'Daily Network Traffic' ,
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(201, 203, 207, 0.2)'
-          ],
-        } ,
-                    ]
+        labels: [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
+          'Sep', 'Oct', 'Nov', 'Dec' ],
+        datasets: [ { data: [20000, 18000, 21000, 10000, 30000, 60000, 50000, 30000,
+          25000, 40000, 30000, 18000], label: 'Monthly Sales in Million US$' } ]
       },
       chartOptions: {
         responsive: true

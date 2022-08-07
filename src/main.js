@@ -19,7 +19,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faLock } from '@fortawesome/free-solid-svg-icons'
+import {faLock, faNewspaper} from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
@@ -28,9 +28,11 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faPerson } from "@fortawesome/free-solid-svg-icons";
 import Charts from './components/Charts.vue'
 import TrainKiosk from './components/TrainKiosk.vue'
 import PointOfSale from './components/PointOfSale.vue'
+import Dashboard from './components/Dashboard';
 
 
 const routes = [
@@ -99,6 +101,11 @@ const routes = [
         path: "/pos",
         name: "PointOfSale",
         component: PointOfSale,
+    },
+    {
+        path: "/dashboard",
+        name: "Dashboard",
+        component: Dashboard
     }
     
 ]
@@ -110,7 +117,7 @@ const router = createRouter ({
 
 library.add(faEnvelope);
 library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, 
-    faUpload, faGlobeAmericas, faGithub);
+    faUpload, faGlobeAmericas, faGithub, faPerson, faUser, faNewspaper);
 
 const app = createApp(App);
 

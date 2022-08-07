@@ -5,7 +5,7 @@
     General
   </p>
   <ul class="menu-list">
-    <li><a>Dashboard</a></li>
+    <li><router-link to="/dashboard">Dashboard</router-link></li>
     <!-- <li><a>Customers</a></li> -->
   </ul>
   <p class="menu-label">
