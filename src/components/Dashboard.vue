@@ -1,6 +1,6 @@
-<template>
+<template class="sidebar-sensitive">
 
-  <div class="columns">
+  <div class="columns sidebar-sensitive">
     <div class="column">
       <div class="panel">
         <header class="panel-heading has-background-danger">
@@ -32,7 +32,7 @@
       </div>
     </div>
   </div>
-  <div class="columns">
+  <div class="columns sidebar-sensitive">
     <div class="column">
       <div class="message">
         <header class="message-header">
@@ -91,10 +91,19 @@
 import NetworkTraffic from "@/components/NetworkTraffic";
 import SalesPie from "@/components/SalesPie";
 import DiskUsage from "@/components/DiskUsage";
+import {onMounted} from "vue";
+import NavBarHeaderVue from "@/components/NavBarHeader";
 export default {
   name: "Dashboard",
   setup () {
-
+    onMounted(() => {
+      let sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
+      for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
+        sidebarSensitiveDivs[i].addEventListener('click', function(event) {
+          NavBarHeaderVue.methods.closeNav(event);
+        });
+      }
+    })
   },
   data () {
     return {
