@@ -59,11 +59,14 @@
         <div class="navbar-end">
         <div class="navbar-item">
             <div class="buttons">
-            <a class="button is-primary">
-                <strong>Sign up</strong>
+            <a class="button is-info" target="_blank" href="https://github.com/jared201/beef">
+                <span class="icon is-medium is-left">
+                     <i class="fab fa-github"></i><font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                </span>
+                <strong>Follow us on Github</strong>            
             </a>
-            <a class="button is-light">
-                Log in
+            <a class="button is-success gumroad-button" target="_blank" href="https://jared201.gumroad.com/l/beef">
+                Get Latest Release from Gumroad
             </a>
             </div>
         </div>
@@ -74,11 +77,19 @@
 
 </template>
 <script>
+import { onMounted } from '@vue/runtime-core';
 
 
 
 export default {
     name: 'NavBarHeader',
+    setup () {
+        onMounted(() => {
+            let gumroad = document.createElement('script');
+            gumroad.setAttribute('src', 'https://jared201.gumroad.com/l/beef');
+            document.head.appendChild(gumroad);
+        })
+    },
     data() {
         return {
           clicked: false,

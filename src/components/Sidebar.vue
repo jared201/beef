@@ -5,7 +5,7 @@
     General
   </p>
   <ul class="menu-list">
-    <li><a>Dashboard</a></li>
+    <li><router-link to="/dashboard">Dashboard</router-link></li>
     <!-- <li><a>Customers</a></li> -->
   </ul>
   <p class="menu-label">
@@ -48,8 +48,8 @@
     <li><router-link to="/forms">Forms</router-link></li>
     <li><router-link to="/charts">Charts and Graphs</router-link></li>
     <li><router-link to="/train">Kiosk Demo</router-link></li>
-    <li><a>POS Demo</a></li>
-    <li><a>Authentication</a></li>
+    <li><router-link to="/pos">POS Demo</router-link></li>
+    <!-- <li><a>Authentication</a></li> -->
   </ul>
   <p class="menu-label">
     Integrations and Custom Development
