@@ -124,6 +124,18 @@ export default {
     useMeta({
       meta: [
         {
+          name: 'twitter:title',
+          content: 'Dashboard Component Page'
+        },
+        {
+          name: 'twitter:description',
+          content: `${desc}`
+        },
+        {
+          name: 'twitter:image',
+          content: `${dashboard_preview}`
+        },
+        {
           name: 'description',
           content: `${desc}`
         },
@@ -135,7 +147,10 @@ export default {
           property: 'og:image',
           content: `${dashboard_preview}`
         },
-
+        {
+          property: 'og:title',
+          content: 'Dashboard Component Page'
+        }
       ],
     })
   },

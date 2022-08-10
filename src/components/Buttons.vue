@@ -1,4 +1,9 @@
 <template>
+    <metainfo>
+      <template v-slot:meta="{content}">
+        {{content}}
+      </template>
+    </metainfo>
     <div><p>{{ msg }}</p></div>
     <div class="tile is-ancestor sidebar-sensitive">
     <div class="tile is-vertical is-8">
@@ -74,9 +79,12 @@
 <script>
 import { onMounted } from 'vue'
 import NavBarHeader from './NavBarHeader.vue'
+import {useMeta} from "vue-meta";
 
 export default {
+
     setup() {
+        const desc = 'This page showcases the button examples of the Beef Dashboard Template'
         onMounted(() => {
             var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
             for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
@@ -84,7 +92,19 @@ export default {
                 NavBarHeader.methods.closeNav(event);
                 });
             }
-        })        
+        })
+        useMeta({
+          meta: [
+            {
+              property: 'og:title',
+              content: 'Buttons Component Page'
+            },
+            {
+              property: 'og:description',
+              content: `${desc}`
+            }
+          ]
+        })
     },
     data () {
         return {
