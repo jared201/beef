@@ -137,6 +137,10 @@ export default {
           content: `${desc}`
         },
         {
+          property: 'og:title',
+          content: 'Dashboard Component Page'
+        },
+        {
           property: 'og:description',
           content: `${desc}`
         },
@@ -144,10 +148,7 @@ export default {
           property: 'og:image',
           content: `${dashboard_preview}`
         },
-        {
-          property: 'og:title',
-          content: 'Dashboard Component Page'
-        },
+
         {
           property: 'og:url',
           content: `${url}`
