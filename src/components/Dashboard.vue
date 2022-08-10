@@ -113,6 +113,7 @@ export default {
   setup () {
     const dashboard_preview = require('../assets/dashboard.png');
     const desc = 'The Dashboard component represents how a typical dashboard can look like'
+    const url = 'https://beef-app-zrggs.ondigitalocean.app/#/dashboard'
     onMounted(() => {
       let sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
       for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
@@ -150,6 +151,10 @@ export default {
         {
           property: 'og:title',
           content: 'Dashboard Component Page'
+        },
+        {
+          property: 'og:url',
+          content: `${url}`
         }
       ],
     })
