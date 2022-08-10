@@ -1,9 +1,10 @@
 <template>
+  <metainfo>
+    <template v-slot:meta="{ content }">{{ content }}</template>
+    <template v-slot:title="{ content }">{{ content }}</template>
+  </metainfo>
   <div id="app" class="container">
-    <metainfo>
-      <template v-slot:meta="{ content }">{{ content }}</template>
-      <template v-slot:title="{ content }">{{ content }}</template>
-    </metainfo>
+
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <nav-bar-header></nav-bar-header>
     <sidebar/>
