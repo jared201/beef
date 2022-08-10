@@ -2,6 +2,7 @@
   <div id="app" class="container">
     <metainfo>
       <template v-slot:meta="{ content }">{{ content }}</template>
+      <template v-slot:title="{ content }">{{ content }}</template>
     </metainfo>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <nav-bar-header></nav-bar-header>
@@ -39,11 +40,11 @@ export default {
       }
     })
     useMeta({
-      title: 'Beef Dashboard Template',
+      title: 'The Beef Dashboard Template',
       meta: [
         {
           name: 'description',
-          content: 'The Beef Dashboard Template is base on Bulma and Vue'
+          content: 'The Beef Dashboard Template is based on Bulma and Vue'
         }
       ]
     })
