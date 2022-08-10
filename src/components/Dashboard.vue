@@ -32,11 +32,7 @@
     </div>
 
   </div>
-  <metainfo>
-    <template v-slot:description="{content}">
-      {{content}}
-    </template>
-  </metainfo>
+
   <div class="columns sidebar-sensitive">
     <div class="column">
       <div class="message">
@@ -155,6 +151,10 @@ export default {
         {
           property: 'og:url',
           content: `${url}`
+        },
+        {
+          property: 'fb:app_id',
+          content: '411951638916172'
         }
       ],
     })

@@ -1,9 +1,5 @@
 <template>
-    <metainfo>
-      <template v-slot:meta="{content}">
-        {{content}}
-      </template>
-    </metainfo>
+
     <div><p>{{ msg }}</p></div>
     <div class="tile is-ancestor sidebar-sensitive">
     <div class="tile is-vertical is-8">
