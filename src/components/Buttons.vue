@@ -85,6 +85,9 @@ export default {
 
     setup() {
         const desc = 'This page showcases the button examples of the Beef Dashboard Template'
+        const title = 'Buttons Component Page'
+        const button_img = require('../assets/buttons.png')
+
         onMounted(() => {
             var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
             for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
@@ -97,11 +100,27 @@ export default {
           meta: [
             {
               property: 'og:title',
-              content: 'Buttons Component Page'
+              content: `${title}`
             },
             {
               property: 'og:description',
               content: `${desc}`
+            },
+            {
+              property: 'og:image',
+              content: `${button_img}`
+            },
+            {
+              name: 'twitter:title',
+              content: `${title}`
+            },
+            {
+              name: 'twitter:description',
+              content: `${desc}`
+            },
+            {
+              name: 'twitter:image',
+              content: `${button_img}`
             }
           ]
         })

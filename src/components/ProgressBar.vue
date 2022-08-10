@@ -41,8 +41,11 @@
 <script>
 import NavBarHeaderVue from './NavBarHeader.vue';
 import { onMounted } from 'vue';
+import {useMeta} from "vue-meta";
 export default {
     setup() {
+        const title = 'Progress Bar Component Page';
+        const desc = 'This is the Progress Bar Component Page';
         onMounted(() => {
         var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
         for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
@@ -50,6 +53,18 @@ export default {
                 NavBarHeaderVue.methods.closeNav(event);
                 });
             }
+        })
+        useMeta({
+          meta: [
+              {
+                name: 'twitter:title',
+                content: `${title}`
+              },
+            {
+              name: 'twitter:description',
+              content: `${desc}`
+            }
+          ]
         })
     },
     data() {
