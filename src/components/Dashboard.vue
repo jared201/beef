@@ -1,5 +1,4 @@
 <template class="sidebar-sensitive">
-
   <div class="columns sidebar-sensitive">
     <div class="column">
       <div class="panel">
@@ -31,7 +30,13 @@
         </section>
       </div>
     </div>
+
   </div>
+  <metainfo>
+    <template v-slot:description="{content}">
+      {{content}}
+    </template>
+  </metainfo>
   <div class="columns sidebar-sensitive">
     <div class="column">
       <div class="message">
@@ -93,9 +98,21 @@ import SalesPie from "@/components/SalesPie";
 import DiskUsage from "@/components/DiskUsage";
 import {onMounted} from "vue";
 import NavBarHeaderVue from "@/components/NavBarHeader";
+import { useMeta} from "vue-meta";
+
+
 export default {
   name: "Dashboard",
+  data () {
+    return {
+      message: 'Dashboard page',
+      timestamp: new Date(),
+      content: 'The Dashboard component represents how a typical dashboard can look like'
+    }
+  },
   setup () {
+    const dashboard_preview = require('../assets/dashboard.png');
+    const desc = 'The Dashboard component represents how a typical dashboard can look like'
     onMounted(() => {
       let sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
       for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
@@ -104,18 +121,30 @@ export default {
         });
       }
     })
-  },
-  data () {
-    return {
-      message: 'Dashboard page',
-      timestamp: new Date(),
-    }
+    useMeta({
+      meta: [
+        {
+          name: 'description',
+          content: `${desc}`
+        },
+        {
+          property: 'og:description',
+          content: `${desc}`
+        },
+        {
+          property: 'og:image',
+          content: `${dashboard_preview}`
+        },
+
+      ],
+    })
   },
   components: {
     NetworkTraffic,
     SalesPie,
     DiskUsage
-  }
+  },
+
 }
 </script>
 

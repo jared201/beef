@@ -33,7 +33,14 @@ import Charts from './components/Charts.vue'
 import TrainKiosk from './components/TrainKiosk.vue'
 import PointOfSale from './components/PointOfSale.vue'
 import Dashboard from './components/Dashboard';
+import { createMetaManager, defaultConfig, resolveOption} from "vue-meta";
 
+const decisionMaker5000000 = resolveOption((prevValue, context) => {
+    const { uid = 0 } = context.vm || {}
+    if (!prevValue || prevValue < uid) {
+        return uid
+    }
+})
 
 const routes = [
     {
@@ -120,8 +127,12 @@ library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlan
     faUpload, faGlobeAmericas, faGithub, faPerson, faUser, faNewspaper);
 
 const app = createApp(App);
-
+const metaManager = createMetaManager({defaultConfig, esi: {
+    group: true, namespaced: true, attributes: ['src', 'test', 'text']
+    },}, decisionMaker5000000);
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router);
+app.use(metaManager);
+
 app.mount('#app');
 
