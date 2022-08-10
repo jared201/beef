@@ -155,6 +155,10 @@ export default {
         {
           property: 'og:url',
           content: `${url}`
+        },
+        {
+          property: 'fb:app_id',
+          content: '411951638916172'
         }
       ],
     })
