@@ -45,6 +45,10 @@ export default {
         {
           name: 'description',
           content: 'The Beef Dashboard Template is based on Bulma and Vue'
+        },
+        {
+          name: 'keywords',
+          content: 'HTML5, Vue, Bulma, User Interface, template, front end'
         }
       ]
     })
