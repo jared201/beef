@@ -1,10 +1,14 @@
 <template>
+  <metainfo>
+    <template v-slot:meta="{ content }">{{ content }}</template>
+    <template v-slot:title="{ content }">{{ content }}</template>
+  </metainfo>
   <div id="app" class="container">
-   
+
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <nav-bar-header></nav-bar-header>
     <sidebar/>
-    <!-- TODO add a MainBody.vue here -->
+
     
     <router-view :key="$route.fullPath"></router-view>
     <nav-bar-footer/>
@@ -17,8 +21,8 @@
 import NavBarHeader from './components/NavBarHeader.vue'
 import NavBarFooter from './components/NavBarFooter.vue'
 import Sidebar from './components/Sidebar.vue'
-import { onMounted } from 'vue';
-
+import {onMounted, } from 'vue';
+import { useMeta } from 'vue-meta'
 
 export default {
   name: 'App',
@@ -36,7 +40,22 @@ export default {
         });
       }
     })
-  }
+    useMeta({
+      title: 'The Beef Dashboard Template',
+      meta: [
+        {
+          name: 'description',
+          content: 'The Beef Dashboard Template is based on Bulma and Vue'
+        },
+        {
+          name: 'keywords',
+          content: 'HTML5, Vue, Bulma, User Interface, template, front end'
+        }
+      ]
+    })
+
+  },
+
 }
 </script>
 

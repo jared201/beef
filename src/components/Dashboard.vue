@@ -1,5 +1,4 @@
 <template class="sidebar-sensitive">
-
   <div class="columns sidebar-sensitive">
     <div class="column">
       <div class="panel">
@@ -31,7 +30,9 @@
         </section>
       </div>
     </div>
+
   </div>
+
   <div class="columns sidebar-sensitive">
     <div class="column">
       <div class="message">
@@ -93,9 +94,22 @@ import SalesPie from "@/components/SalesPie";
 import DiskUsage from "@/components/DiskUsage";
 import {onMounted} from "vue";
 import NavBarHeaderVue from "@/components/NavBarHeader";
+import { useMeta} from "vue-meta";
+
+
 export default {
   name: "Dashboard",
+  data () {
+    return {
+      message: 'Dashboard page',
+      timestamp: new Date(),
+      content: 'The Dashboard component represents how a typical dashboard can look like'
+    }
+  },
   setup () {
+    const dashboard_preview = require('../assets/dashboard.png');
+    const desc = 'The Dashboard component represents how a typical dashboard can look like'
+    const url = 'https://beef-app-zrggs.ondigitalocean.app/#/dashboard'
     onMounted(() => {
       let sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
       for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
@@ -104,18 +118,54 @@ export default {
         });
       }
     })
-  },
-  data () {
-    return {
-      message: 'Dashboard page',
-      timestamp: new Date(),
-    }
+    useMeta({
+      meta: [
+        {
+          name: 'twitter:title',
+          content: 'Dashboard Component Page'
+        },
+        {
+          name: 'twitter:description',
+          content: `${desc}`
+        },
+        {
+          name: 'twitter:image',
+          content: `${dashboard_preview}`
+        },
+        {
+          name: 'description',
+          content: `${desc}`
+        },
+        {
+          'property': 'og:title',
+          'content': 'Dashboard Component Page'
+        },
+        {
+          property: 'og:description',
+          content: `${desc}`
+        },
+        {
+          property: 'og:image',
+          content: `${dashboard_preview}`
+        },
+
+        {
+          property: 'og:url',
+          content: `${url}`
+        },
+        {
+          property: 'fb:app_id',
+          content: '411951638916172'
+        }
+      ],
+    })
   },
   components: {
     NetworkTraffic,
     SalesPie,
     DiskUsage
-  }
+  },
+
 }
 </script>
 

@@ -176,6 +176,7 @@
 <script>
 import { onMounted } from 'vue'
 import NavBarHeaderVue from './NavBarHeader.vue'
+import {useMeta} from "vue-meta";
 
 export default {
     setup() {
@@ -187,6 +188,12 @@ export default {
                 });
             }
         })
+        useMeta({
+          meta: [
+
+          ]
+        })
+
     },
     data() {
         return {
@@ -201,7 +208,9 @@ export default {
             const prog = document.getElementById("progress");            
             loop(prog);
         }
-    }
+    },
+
+
 }
 
 
