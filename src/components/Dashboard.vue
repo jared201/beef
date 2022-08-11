@@ -137,8 +137,8 @@ export default {
           content: `${desc}`
         },
         {
-          property: 'og:title',
-          content: 'Dashboard Component Page'
+          'property': 'og:title',
+          'content': 'Dashboard Component Page'
         },
         {
           property: 'og:description',
