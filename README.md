@@ -1,6 +1,8 @@
 # Beef Template
 
 Live demo is available at [Beef Template](https://beef-template.herokuapp.com/#/)
+![Screenshot 2022-12-19 at 2 42 32 PM](https://user-images.githubusercontent.com/4927433/208363938-a6ada3aa-9e0d-4c2f-b28c-f9c5534a3438.png)
+
 ## Project setup
 ```
 npm install
