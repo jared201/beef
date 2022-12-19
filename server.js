@@ -2,6 +2,7 @@ const express = require ('express')
 const path = require('path')
 const PORT = process.env.PORT || 5002
 const bodyParser = require('body-parser')
+const {callback} = require("chart.js/helpers");
 
 express()
     .use(express.static(path.join(__dirname, 'dist')))
@@ -16,6 +17,14 @@ express()
     .get('/test_api', (req, res)=>{
         console.log("test_api");
         res.status(200).send('OK');
+    })
+    .get('/get_bitcoin_price', (req, res)=>{
+        console.log("get_bitcoin_price");
+        const btc = require('./server/bitcoinController');
+        btc.getBitcoinPrice(function (price) {
+            res.status(200).send(price);
+        });
+
     })
     .post('/test_add_orders', (req, res)=> {
         let body = req.body;
