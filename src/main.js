@@ -113,6 +113,10 @@ const routes = [
         path: "/dashboard",
         name: "Dashboard",
         component: Dashboard
+    },
+    {
+        path: "/dms",
+
     }
     
 ]
