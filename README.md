@@ -1,6 +1,6 @@
 # Beef Template
 
-Live demo is available at [Beef Template](https://beef-app-zrggs.ondigitalocean.app/)
+Live demo is available at [Beef Template](https://beef-template.herokuapp.com/#//)
 ## Project setup
 ```
 npm install
