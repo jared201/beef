@@ -37,9 +37,13 @@ export default {
     this.getBitcoinPrice();
   },
   watch: {
-    bitcoin_price: function () {
-      this.getBitcoinPrice();
+    bitcoin_price: {
+      handler() {
+        console.log("bitcoin_price changed");
+        setInterval(this.getBitcoinPrice, 2000);
+      },
     },
+    immediate: true,
   },
 
 }
