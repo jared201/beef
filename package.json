@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@svg-maps/ukraine": "^1.0.0",
+    "@vueuse/core": "^9.9.0",
     "bulma": "^0.9.4",
     "chart.js": "^3.8.0",
     "core-js": "^3.6.5",
