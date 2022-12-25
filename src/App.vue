@@ -23,6 +23,7 @@ import NavBarFooter from './components/NavBarFooter.vue'
 import Sidebar from './components/Sidebar.vue'
 import {onMounted, } from 'vue';
 import { useMeta } from 'vue-meta'
+;
 
 export default {
   name: 'App',

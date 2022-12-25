@@ -33,7 +33,9 @@ import Charts from './components/Charts.vue'
 import TrainKiosk from './components/TrainKiosk.vue'
 import PointOfSale from './components/PointOfSale.vue'
 import Dashboard from './components/Dashboard';
+import Pricing  from "@/components/Pricing.vue";
 import { createMetaManager, defaultConfig, resolveOption} from "vue-meta";
+import { createPinia } from "pinia";
 
 const decisionMaker5000000 = resolveOption((prevValue, context) => {
     const { uid = 0 } = context.vm || {}
@@ -117,6 +119,11 @@ const routes = [
     {
         path: "/dms",
 
+    },
+    {
+        path: "/pricing",
+        name: "Pricing",
+        component: Pricing
     }
     
 ]
@@ -134,9 +141,11 @@ const app = createApp(App);
 const metaManager = createMetaManager({defaultConfig, esi: {
     group: true, namespaced: true, attributes: ['src', 'test', 'text']
     },}, decisionMaker5000000);
+const pinia = createPinia();
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router);
 app.use(metaManager);
+app.use(pinia);
 
 app.mount('#app');
 
