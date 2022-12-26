@@ -12,6 +12,10 @@ npm install
 ```
 npm run serve
 ```
+#### To run app with backend services
+```
+node server.js
+```
 
 ### Compiles and minifies for production
 ```
