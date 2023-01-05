@@ -29,6 +29,7 @@ import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import Charts from './components/Charts.vue'
 import TrainKiosk from './components/TrainKiosk.vue'
 import PointOfSale from './components/PointOfSale.vue'
@@ -135,7 +136,7 @@ const router = createRouter ({
 
 library.add(faEnvelope);
 library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, 
-    faUpload, faGlobeAmericas, faGithub, faPerson, faUser, faNewspaper);
+    faUpload, faGlobeAmericas, faGithub, faPerson, faUser, faNewspaper, faAngleDown);
 
 const app = createApp(App);
 const metaManager = createMetaManager({defaultConfig, esi: {

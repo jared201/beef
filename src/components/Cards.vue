@@ -70,7 +70,37 @@
                <figure class="image is-4by3">
                   <img src="https://bulma.io/images/placeholders/640x480.png">
                </figure>
+              <br>
+              <br>
+              <Popper class="popper-demo" arrow hover openDelay="200" closeDelay="100"  placement="top" >
+                <template #content>
+                  <PopoverBase/>
+                </template>
+                <div id="popover" class="card" >
+                  <div class="card-header">
+                    <p class="card-header-title">
+                      Popover Demo
+                    </p>
+                    <button class="card-header-icon" aria-label="more options">
+                    <span class="icon">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i><font-awesome-icon :icon="['fas', 'angle-down']" />
+                    </span>
+                    </button>
+                  </div>
+                  <div class="card-content">
+
+                    <div class="content">
+                      Hover on this card to show popover
+                      <a href="#">@jaredpogi</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                      <br>
+                      <time datetime="2016-1-1">{{timestamp}}</time>
+                    </div>
+                  </div>
+                </div>
+              </Popper>
+
             </article>
+
             </div>
          </div>
          <div class="tile is-parent">
@@ -98,18 +128,25 @@
       </div>
 </template>
 <script>
-import { onMounted } from "vue";
+import {onMounted} from "vue";
 import NavBarHeaderVue from "./NavBarHeader.vue";
-
-
+import Popper from 'vue3-popper';
+import PopoverBase from "@/components/PopoverBase.vue";
 export default ({
+  components: {
+    Popper,
+  PopoverBase
+  },
    data () {
       return {
         msg: "Cards Showcase here",
         card_content: "This is card with placeholder image and a media sub-content " +
                      "great for building journalistic content for bloggers and journalists.",
         author: "Jared Odulio",             
-        timestamp: this.getNow(),          
+        timestamp: this.getNow(),
+        element: document.getElementById("popover"),
+        isToolTipVisible: false,
+        tooltip: `This is a tooltip with <strong>HTML</strong>!`,
       }
    },
    name: "Cards",
@@ -121,7 +158,13 @@ export default ({
          const dateTime = date + ' '+ time;
          console.log(dateTime);
          return dateTime;
-      },     
+      },
+      openTooltip() {
+        this.isTooltipVisible = true;
+      },
+     closeTooltip() {
+          this.isTooltipVisible = false;
+        }
    },
    setup() {
     onMounted(() => {
@@ -131,10 +174,42 @@ export default ({
           NavBarHeaderVue.methods.closeNav(event);
         });
       }
-    })
+      //Popper.arrow = true;
+    });
+
   }
 })
 </script>
 <style scoped>
-
+.tooltip {
+  display: inline-block;
+  background: #ffffff;
+  color: #643045;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.popper-container {
+  padding: 50px;
+  margin: 0 20px 20px;
+  border: 2px dashed #dadada;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.popper-demo {
+  --popper-theme-background-color: #ffffff;
+  --popper-theme-background-color-hover: #ffffff;
+  --popper-theme-text-color: #333333;
+  --popper-theme-border-width: 1px;
+  --popper-theme-border-style: solid;
+  --popper-theme-border-color: #dadada;
+  --popper-theme-border-radius: 6px;
+  --popper-theme-padding: 32px;
+  --popper-theme-box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.25);
+}
 </style>
