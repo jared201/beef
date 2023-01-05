@@ -30,6 +30,7 @@
     "vue-chartjs": "^4.1.1",
     "vue-meta": "^3.0.0-alpha.2",
     "vue-router": "^4.0.16",
+    "vue3-popper": "^1.5.0",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
