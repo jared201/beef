@@ -3,10 +3,10 @@
     <div class="hero-body sidebar-sensitive">
         <div class="container">
         <h1 class="title">
-            Beef Dashboard Template
+          {{ hero_title }}
         </h1>
         <h2 class="subtitle">
-            A Template for all
+            A design system for all
         </h2>
         </div>
     </div>
@@ -21,9 +21,15 @@ import Palette from './Palette.vue';
 export default {
   name: 'Hero',
   components: { Palette },
+  data() {
+    return {
+      hero_title: 'The Beef Design System',
+    };
+  },
   props:
     {
-    msg: String
+    msg: String,
+
   }
   , title: 'Beef', 
   setup() {
