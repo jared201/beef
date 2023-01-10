@@ -3,7 +3,7 @@
   <div class="content has-text-centered">
     <div>
       <p>
-        <strong>Beef Dashboard Template</strong> by <a href="https://main.hueburg.com">Hueburg Solutions Consultancy, Inc.</a> Copyright {{ year }} 
+        <strong>Beef Design System</strong> by <a href="https://main.hueburg.com">Hueburg Solutions Consultancy, Inc.</a> Copyright {{ year }}
       </p>
     </div>
   </div>
