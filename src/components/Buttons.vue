@@ -70,14 +70,28 @@
         </div>
         </article>
     </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification ">
+          <div class="content">
+            <p class="title">Custom Beef button</p>
+            <p class="subtitle">With even more content</p>
+            <div class="content">
+              <!-- Content -->
+             <bds-button :class="buttonClass">Button Component Test</bds-button>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>    
 </template>
 <script>
 import { onMounted } from 'vue'
 import NavBarHeader from './NavBarHeader.vue'
 import {useMeta} from "vue-meta";
+import BdsButton from "@/components/custom/BdsButton.vue";
 
 export default {
+  components: {BdsButton},
 
     setup() {
         const desc = 'This page showcases the button examples of the Beef Dashboard Template'
@@ -85,7 +99,7 @@ export default {
         const button_img = require('../assets/buttons.png')
 
         onMounted(() => {
-            var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
+            const sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
             for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
                 sidebarSensitiveDivs[i].addEventListener('click', function(event) {
                 NavBarHeader.methods.closeNav(event);
@@ -125,8 +139,13 @@ export default {
         return {
             name: "Buttons",
             msg: "Different buttons for different purposes",
+            button_img: require('../assets/buttons.png'),
+            type: 'is-danger',
+            size: 'is-medium',
+            buttonClass: 'button is-large is-danger',
         }
-    }    
+    },
+
 }
 </script>
 <style>
