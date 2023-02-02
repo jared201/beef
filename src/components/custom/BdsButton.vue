@@ -26,7 +26,7 @@ export default {
     },
     buttonClass: {
       type: String,
-      default: "is-info is-large",
+      default: "button is-primary is-large",
     },
   },
 
