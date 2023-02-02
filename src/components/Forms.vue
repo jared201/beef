@@ -171,14 +171,27 @@
                 </div>
             </div>
         </div>
+        <div class="columns pb-3">
+          <div class="column">
+            <div class="is-parent notification">
+                <div class=" is-child notification panel-heading is-primary">
+                    Dropdown component
+                </div>
+               <bds-dropdown/>
+            </div>
+
+          </div>
+        </div>
     </div>
 </template>
 <script>
 import { onMounted } from 'vue'
 import NavBarHeaderVue from './NavBarHeader.vue'
 import {useMeta} from "vue-meta";
+import BdsDropdown from "@/components/custom/BdsDropdown.vue";
 
 export default {
+  components: {BdsDropdown},
     setup() {
          onMounted(() => {
         var sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");

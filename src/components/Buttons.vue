@@ -77,7 +77,8 @@
             <p class="subtitle">With even more content</p>
             <div class="content">
               <!-- Content -->
-             <bds-button :class="buttonClass">Button Component Test</bds-button>
+             <bds-button class="{{this.buttonClass}}" @click="setColor">Button Component Test</bds-button>
+              <bds-dropdown/>
             </div>
           </div>
         </article>
@@ -89,15 +90,18 @@ import { onMounted } from 'vue'
 import NavBarHeader from './NavBarHeader.vue'
 import {useMeta} from "vue-meta";
 import BdsButton from "@/components/custom/BdsButton.vue";
+import BdsDropdown from "@/components/custom/BdsDropdown.vue";
+import {useButtonState} from "@/state/ButtonState";
 
 export default {
-  components: {BdsButton},
+  components: {BdsDropdown, BdsButton},
 
     setup() {
         const desc = 'This page showcases the button examples of the Beef Dashboard Template'
         const title = 'Buttons Component Page'
         const button_img = require('../assets/buttons.png')
-
+        const buttonState =  useButtonState();
+        buttonState.$patch.color = 'is-info';
         onMounted(() => {
             const sidebarSensitiveDivs = document.querySelectorAll(".sidebar-sensitive");
             for (let i = 0; i < sidebarSensitiveDivs.length; i++) {
@@ -140,11 +144,27 @@ export default {
             name: "Buttons",
             msg: "Different buttons for different purposes",
             button_img: require('../assets/buttons.png'),
-            type: 'is-danger',
-            size: 'is-medium',
-            buttonClass: 'button is-large is-danger',
+            type: useButtonState().color,
+            size: 'is-large',
+            buttonClass: `button ${this.type} ${this.size}`,
         }
     },
+    watch: {
+        useButtonState() {
+            this.buttonClass = `button ${this.type} ${this.size}`
+        }
+    },
+    methods: {
+        setColor() {
+          console.log('setColor')
+            this.type = 'is-danger'
+            const buttonSate = useButtonState();
+            buttonSate.changeColor('is-success is-large');
+            this.buttonClass = this.type;
+          console.log(this.type)
+        }
+    }
+
 
 }
 </script>
