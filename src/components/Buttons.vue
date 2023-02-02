@@ -74,11 +74,14 @@
         <article class="tile is-child notification ">
           <div class="content">
             <p class="title">Custom Beef button</p>
-            <p class="subtitle">With even more content</p>
+            <p class="subtitle">With cross component communication using Pinia</p>
             <div class="content">
               <!-- Content -->
-             <bds-button class="{{this.buttonClass}}" @click="setColor">Button Component Test</bds-button>
-              <bds-dropdown/>
+             <bds-button :class="this.buttonClass" @click="setColor">Button Component Test</bds-button>
+
+            </div>
+            <div class="content">
+              <bds-dropdown @click="getColor"/>
             </div>
           </div>
         </article>
@@ -150,19 +153,31 @@ export default {
         }
     },
     watch: {
-        useButtonState() {
+        buttonClass: function (newVal, oldVal) {
+            console.log('buttonClass changed from ' + oldVal + ' to ' + newVal)
+
             this.buttonClass = `button ${this.type} ${this.size}`
+
         }
     },
     methods: {
         setColor() {
           console.log('setColor')
-            this.type = 'is-danger'
+
             const buttonSate = useButtonState();
             buttonSate.changeColor('is-success is-large');
-            this.buttonClass = this.type;
-          console.log(this.type)
-        }
+            this.buttonClass = buttonSate.color;
+          console.log(this.buttonClass)
+        },
+      getColor() {
+        console.log('getColor')
+        const buttonSate = useButtonState();
+        console.log(buttonSate.color)
+        this.type = buttonSate.color;
+
+        console.log('color', this.type)
+        this.buttonClass = `button ${this.type} ${this.size}`
+      }
     }
 
 
