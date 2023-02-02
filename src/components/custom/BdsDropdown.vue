@@ -49,6 +49,7 @@ export default {
       this.item = item;
       const button = document.getElementById('dropdown');
       console.log('item', this.item);
+
       const buttonState = useButtonState();
       buttonState.changeColor(item)
       this.list.forEach( (item) => {
