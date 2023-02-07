@@ -61,6 +61,12 @@
     <li><a>Mulesoft</a></li>
     <li><a>SMS Alerts</a></li>
   </ul>
+      <p class="menu-label">
+        Smart Panels and IoT
+      </p>
+      <ul class="menu-list">
+        <li><router-link to="/touch_panel">Smart Home Automation</router-link></li>
+      </ul>
 </aside>
     <!-- <div class="block">
       <b-field grouped group-multiline>

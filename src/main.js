@@ -37,6 +37,7 @@ import Dashboard from './components/Dashboard';
 import Pricing  from "@/components/Pricing.vue";
 import { createMetaManager, defaultConfig, resolveOption} from "vue-meta";
 import { createPinia } from "pinia";
+import TouchPanel from "@/components/touchscreen/TouchPanel.vue";
 
 const decisionMaker5000000 = resolveOption((prevValue, context) => {
     const { uid = 0 } = context.vm || {}
@@ -125,6 +126,11 @@ const routes = [
         path: "/pricing",
         name: "Pricing",
         component: Pricing
+    },
+    {
+        path: "/touch_panel",
+        name: TouchPanel,
+        component: TouchPanel
     }
     
 ]
