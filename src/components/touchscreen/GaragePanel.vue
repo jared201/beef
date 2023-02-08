@@ -28,7 +28,7 @@
       </div>
       <div class="column">
         <p class="text-font has-text-white">Garage Cam</p>
-        <div class="full-top">
+        <div class="full-top white-border">
           <img :src="this.imgData" alt="Garage Cam"/>
         </div>
         <div class="column">
@@ -117,7 +117,7 @@ export default {
       lightStatus: "Off",
       exhaustStatus: "Off",
       progress: 0,
-      imgData: require('../../assets/cctv-footage.webp')
+      imgData: require('../../assets/auto-gate.png')
     }
   },
 }
@@ -159,5 +159,8 @@ export default {
 }
 .full-top {
   margin-top: 0;
+}
+.white-border {
+  border: 1px solid white;
 }
 </style>
