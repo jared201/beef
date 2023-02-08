@@ -130,7 +130,13 @@ const routes = [
     {
         path: "/touch_panel",
         name: TouchPanel,
-        component: TouchPanel
+        component: TouchPanel,
+
+    },
+    {
+        path: "/garage_panel",
+        name: "GaragePanel",
+        component: () => import("@/components/touchscreen/GaragePanel.vue")
     }
     
 ]
