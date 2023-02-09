@@ -83,7 +83,7 @@ export default {
         this.progress = progress;
         if (progress >= 100) {
           clearInterval(interval);
-          this.gateStatus = "Closed";
+          this.gateStatus = "Opened";
         }
       }, 1000);
     },
