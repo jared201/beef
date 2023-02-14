@@ -49,6 +49,7 @@
     <li><router-link to="/charts">Charts and Graphs</router-link></li>
     <li><router-link to="/train">Kiosk Demo</router-link></li>
     <li><router-link to="/pos">POS Demo</router-link></li>
+    <li><router-link to="/doc_management">Document Management System</router-link></li>
     <!-- <li><a>Authentication</a></li> -->
   </ul>
   <p class="menu-label">

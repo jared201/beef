@@ -30,6 +30,7 @@ import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 import Charts from './components/Charts.vue'
 import TrainKiosk from './components/TrainKiosk.vue'
 import PointOfSale from './components/PointOfSale.vue'
@@ -137,6 +138,11 @@ const routes = [
         path: "/garage_panel",
         name: "GaragePanel",
         component: () => import("@/components/touchscreen/GaragePanel.vue")
+    },
+    {
+       path: '/doc_management',
+       name: 'RootContainer',
+         component: () => import("@/components/docmanagement/RootContainer.vue")
     }
     
 ]
@@ -148,7 +154,7 @@ const router = createRouter ({
 
 library.add(faEnvelope);
 library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, 
-    faUpload, faGlobeAmericas, faGithub, faPerson, faUser, faNewspaper, faAngleDown);
+    faUpload, faGlobeAmericas, faGithub, faPerson, faUser, faNewspaper, faAngleDown, faFolderOpen);
 
 const app = createApp(App);
 const metaManager = createMetaManager({defaultConfig, esi: {
