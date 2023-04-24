@@ -26,6 +26,11 @@ express()
         });
 
     })
+    .get('/test_get_api_key', (req, res)=>{
+        console.log("get_api_key");
+        const key = require('./server/apiKeyController');
+        res.status(200).send(key.generateApiKey());
+    })
     .post('/test_add_orders', (req, res)=> {
         let body = req.body;
         const oc = require('./server/orderscontroller');
