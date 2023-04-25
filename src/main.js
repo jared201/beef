@@ -39,6 +39,7 @@ import Pricing  from "@/components/Pricing.vue";
 import { createMetaManager, defaultConfig, resolveOption} from "vue-meta";
 import { createPinia } from "pinia";
 import TouchPanel from "@/components/touchscreen/TouchPanel.vue";
+import ApiEndpoint from "@/components/endpoint/ApiEndpoint.vue";
 
 const decisionMaker5000000 = resolveOption((prevValue, context) => {
     const { uid = 0 } = context.vm || {}
@@ -143,6 +144,11 @@ const routes = [
        path: '/doc_management',
        name: 'RootContainer',
          component: () => import("@/components/docmanagement/RootContainer.vue")
+    },
+    {
+        path: '/api_endpoint',
+        name: 'ApiEndpoint',
+        component: ApiEndpoint
     }
     
 ]
