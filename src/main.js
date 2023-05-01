@@ -19,7 +19,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import {faLock, faNewspaper} from '@fortawesome/free-solid-svg-icons'
+import {faComment, faLock, faNewspaper} from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
@@ -39,6 +39,7 @@ import Pricing  from "@/components/Pricing.vue";
 import { createMetaManager, defaultConfig, resolveOption} from "vue-meta";
 import { createPinia } from "pinia";
 import TouchPanel from "@/components/touchscreen/TouchPanel.vue";
+import BeefSms from "@/components/beef_sms/BeefSms.vue";
 
 const decisionMaker5000000 = resolveOption((prevValue, context) => {
     const { uid = 0 } = context.vm || {}
@@ -143,6 +144,11 @@ const routes = [
        path: '/doc_management',
        name: 'RootContainer',
          component: () => import("@/components/docmanagement/RootContainer.vue")
+    },
+    {
+        path: '/beef_sms',
+        name: 'BeefSMS',
+        component: BeefSms
     }
     
 ]
@@ -154,7 +160,8 @@ const router = createRouter ({
 
 library.add(faEnvelope);
 library.add(faTwitter, faLock, faUser, faHouse, faPhone, faCalendar, faPaperPlane, 
-    faUpload, faGlobeAmericas, faGithub, faPerson, faUser, faNewspaper, faAngleDown, faFolderOpen);
+    faUpload, faGlobeAmericas, faGithub, faPerson, faUser, faNewspaper, faAngleDown, faFolderOpen,
+    faComment);
 
 const app = createApp(App);
 const metaManager = createMetaManager({defaultConfig, esi: {
