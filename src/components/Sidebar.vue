@@ -60,7 +60,7 @@
     <li><a>Spring Boot</a></li>
     <li><a>Kafka</a></li>
     <li><a>Mulesoft</a></li>
-    <li><a>SMS Alerts</a></li>
+    <li><router-link to="/beef_sms">SMS Alerts</router-link></li>
   </ul>
       <p class="menu-label">
         Smart Panels and IoT
